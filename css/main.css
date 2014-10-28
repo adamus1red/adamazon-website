@@ -11,9 +11,12 @@ body {
   	max-height: 340px;
 }
 .center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  	display: block;
+  	margin-right: auto;
+	margin-left: auto;
+}
+.search {
+	
 }
 .pull-right {
   float: right !important;
