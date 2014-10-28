@@ -1,6 +1,6 @@
 <?php
 	$site_name = "Massive-octo-dubstep";
-	$base_url = "";
+	$base_url = "./";
 /* mySQL DB stuff */
 
 	$mysql_host = "database.adamazon.tk";
