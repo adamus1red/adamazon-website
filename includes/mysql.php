@@ -23,7 +23,7 @@
 class MySQL {
 	
 	// Base variables
-    var $lastError;         // Holds the last error
+   var $lastError;         // Holds the last error
 	var $lastQuery;         // Holds the last query
 	var $result;            // Holds the MySQL query result
 	var $records;           // Holds the total number of records returned
