@@ -42,3 +42,10 @@ body {
   	border: 1px solid transparent;
  	border-radius: 4px;
 }
+#logo {
+  background: url(images/logo.png) no-repeat center;
+  float: left;
+  height: 95px;
+  text-indent: -9999px;
+  width: 166px;
+}

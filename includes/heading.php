@@ -1,4 +1,5 @@
 		<div class="heading">
+			<h1 id="logo">Adamazon</h1>
 			<form class="search" method="POST" action="search.php">
 				<input type="text" placeholder="Search">
 				<button class="button search" type="submit">Search</button>
