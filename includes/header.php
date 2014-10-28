@@ -1,3 +1,6 @@
+<?php
+include_once("mysql.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
