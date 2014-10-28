@@ -5,5 +5,5 @@ CS312 Group Project - Shopping Site
 
 Thomas Sinclair - mlb12174
 Adam McGhie - rgb12180
-Grant Toghill - 
+Grant Toghill - wsb12157
 Darren Tang - 
