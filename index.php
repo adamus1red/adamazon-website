@@ -5,11 +5,8 @@
    include("includes/header.php");
 	include("includes/heading.php");
 ?>
-<p>content
 
-	<h1> ADAMAZON </h1>
-
-</p>
+<p>content</p>
 
 <?php 
 	include("includes/footer.php");
