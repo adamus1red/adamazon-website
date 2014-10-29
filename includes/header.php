@@ -6,5 +6,6 @@ include_once("mysql.php");
 	<head>
 		<title><?php echo $site_name;?> - <?php echo $site_page_title;?></title>
 		<link rel="stylesheet" href="<?php echo $base_url;?>/css/main.css">
+		<script type="text/javascript" src="<?php echo $base_url;?>/js/we-love-ie.js"></script>
 	</head>
 	<body>
