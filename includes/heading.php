@@ -1,4 +1,5 @@
 		<div class="heading">
+            <div class="heading-content">
 			<h1 class="pull-left" id="logo">Adamazon</h1>
 			<form class="search" method="POST" action="search.php">
 				<input type="text" placeholder="Search">
@@ -13,6 +14,7 @@
             </div>
             <button type="submit" class="button">Sign in</button>
           </form>
+          </div>
 		</div>
-		<div class="container">
+		<div class="content">
 		

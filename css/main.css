@@ -10,6 +10,17 @@ body {
   	left: 0;
   	max-height: 340px;
 }
+.heading-content {
+    width:100%;
+    position:fixed;
+    top:0px;
+}
+.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    margin: 70px auto;
+}
 .center-block {
   	display: block;
   	margin-right: auto;
