@@ -24,9 +24,8 @@ body {
     border: 1px solid #CCC;
     margin: 100px auto;
 }
-form{
-    display: inline-block;
-    margin: 1em;
+.login-box {
+    height: 24px;
 }
 
 .center-block {

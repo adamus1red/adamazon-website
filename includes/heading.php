@@ -9,8 +9,8 @@
                 </div>
                 <div class="pull-right login">
                     <form role="form" method="POST" action="login.php">
-                        <input type="text" placeholder="Email" class="form-control">
-                        <input type="password" placeholder="Password" class="form-control">
+                        <input type="text" placeholder="Email" class="login-box">
+                        <input type="password" placeholder="Password" class="login-box">
                         <button type="submit" id="login" class="button">Sign in</button>
                     </form>
                 </div>
