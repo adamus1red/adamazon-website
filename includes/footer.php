@@ -2,9 +2,9 @@
                     </tr>
                 </tbody>
             </table>
-		</div>		
-		<footer>
-			
-		</footer>
-	</body>
+        </div>        
+        <footer>
+            
+        </footer>
+    </body>
 </html>
