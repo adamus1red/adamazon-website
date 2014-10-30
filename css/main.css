@@ -55,7 +55,10 @@ form {
 .sidebar {
     width: 20%;
 }
-
+ul > .sidebar {
+{
+    list-style-type: none;
+}
 .pull-right {
     float: right !important;
 }
