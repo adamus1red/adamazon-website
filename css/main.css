@@ -1,9 +1,16 @@
+/* HTML tag's should go here */
 html {
   font-family: Helvetica, sans-serif;
 }
 body {
   margin: 0;
 }
+form {
+    display: inline-block;
+    margin: 1em;
+}
+
+/* Classes should go here */
 .heading {
 	position: fixed;
   	right: 0;
@@ -71,6 +78,8 @@ body {
   	border: 1px solid transparent;
  	border-radius: 4px;
 }
+
+/* ID's should go here */
 #search {
     background: url(../images/icons/glyphicons_027_search.png) no-repeat center;
     height: 24px;
