@@ -13,7 +13,7 @@ body {
 .heading-content {
     width: 100%;
     position: fixed;
-    display: inline;
+    display: inline-block;
     top: 10px;
     height: 100px;
     /*margin-top: 10px*/
@@ -25,7 +25,7 @@ body {
     margin: 100px auto;
 }
 form{
-    display: inline-block;  
+    display: inline-block;
     margin: 1em;
 }
 
