@@ -41,7 +41,7 @@ form{
 }
 .search-box {
     width: 200px;
-    /*display: inherit;*/
+    height: 20px;
 }
 .login {
     display: inline;
@@ -75,11 +75,10 @@ form{
 }
 #search {
     background: url(../images/icons/glyphicons_027_search.png) no-repeat center;
-    float: left;
+    float: right;
     height: 24px;
     text-indent: -9999px;
     width: 24px;
-    /*margin-top: -20px;*/
 }
 #logo {
     background: url(../images/logo.png) no-repeat center;
