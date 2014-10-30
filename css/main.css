@@ -37,12 +37,14 @@ form{
 .search {
     width: 100%;
     padding-left: 20px;
+    display: inherit;
 }
 .search-box {
     width: 200px;
+    display: inherit;
 }
 .login {
-
+    display: inherit;
 }
 .pull-right {
     float: right !important;
