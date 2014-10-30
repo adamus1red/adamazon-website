@@ -7,3 +7,9 @@ CS312 Group Project - Shopping Site
 * Adam McGhie - rgb12180
 * Grant Toghill - wsb12157
 * Darren Tang - 
+
+---
+
+Icons provided by http://glyphicons.com/
+
+mySQL class provided by Ed Rackham (http://github.com/a1phanumeric/PHP-MySQL-Class)
