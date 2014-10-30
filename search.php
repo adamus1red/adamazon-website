@@ -10,7 +10,7 @@
         $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_password, $mysql_host);
         
         // Build an SQL query to search the blog_entries table
-        $sql = "SELECT * FROM blog_entries WHERE adamazon.items
+        $sql = "SELECT * FROM items WHERE items
                 LIKE '%{$search}%'";
         // Execute the query
         $result = $oMySQL->executeSQL($sql)
