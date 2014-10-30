@@ -1,5 +1,12 @@
 <?php
 include_once("mysql.php");
+/*
+   if (eregi("MSIE",getenv("HTTP_USER_AGENT")) ||
+       eregi("Internet Explorer",getenv("HTTP_USER_AGENT"))) {
+	Header("Location: http://www.domain.com/ie_reject.html");
+	exit;
+   }
+   */
 ?>
 <!DOCTYPE html>
 <html>

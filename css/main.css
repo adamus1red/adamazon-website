@@ -21,7 +21,7 @@ body {
     width:960px;
     background: #F0F0F0;
     border: 1px solid #CCC;
-    margin: 70px auto;
+    margin: 100px auto;
 }
 form{
     display: inline-block;  
@@ -34,7 +34,7 @@ form{
 	margin-left: auto;
 }
 .search {
-    
+    padding-left: 20px
 }
 .search-box {
     width: 200px;
