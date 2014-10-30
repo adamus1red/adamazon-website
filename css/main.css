@@ -73,15 +73,12 @@ body {
 }
 #search {
     background: url(../images/icons/glyphicons_027_search.png) no-repeat center;
-    float: right;
     height: 24px;
     text-indent: -9999px;
     width: 24px;
 }
 #login {
-
     background: url(../images/icons/glyphicons_151_new_window.png) no-repeat center;
-    float: right;
     height: 24px;
     text-indent: -9999px;
     width: 24px;
