@@ -17,4 +17,13 @@
             </div>
 		</div>
 		<div class="content center-block">
-		
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="sidebar">
+                            <ul>
+                                <li>Something</li>
+                                <li>Something else</li>
+                            </ul>
+                        </td>
+                        <td class="content">

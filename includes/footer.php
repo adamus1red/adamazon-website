@@ -1,3 +1,7 @@
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 		</div>		
 		<footer>
 			
