@@ -57,6 +57,7 @@ form {
 }
 .sidebar-content {
     list-style-type: none;
+    line-height: 23px;
 }
 .pull-right {
     float: right !important;
