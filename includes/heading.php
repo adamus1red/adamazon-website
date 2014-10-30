@@ -22,9 +22,15 @@
                     <tr>
                         <td class="sidebar">
                             <ul class="sidebar-content">
-                                <li>Category 1</li>
-                                <li>Category 2</li>
-                                <li>etc</li>
+                            <?php 
+                                $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_password, $mysql_host);
+                                $sql = "SELECT * FROM `category` WHERE `category`.`active` IS TRUE";
+                                $result = $oMySQL->executeSQL($sql)
+                                // Loop over results
+                                while($row = mysql_fetch_array($result)){
+                                    echo "<li><a href=\"" .$base_url ."/category.php?cat=" . $row['catID'] . "\">". $row['catName'] ."</a></li>";
+                                }
+                            ?>
                             </ul>
                         </td>
                         <td class="content">
