@@ -30,6 +30,7 @@ form {
     background: #F0F0F0;
     border: 1px solid #CCC;
     margin: 100px auto;
+    border-radius: 4px;
 }
 .login-box {
     height: 24px;
@@ -51,6 +52,10 @@ form {
 .login {
     display: inline;
 }
+.sidebar {
+    width: 20%;
+}
+
 .pull-right {
     float: right !important;
 }
