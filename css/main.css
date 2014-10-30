@@ -24,11 +24,8 @@ body {
     margin: 70px auto;
 }
 form{
-    width: 200px;           //JUST FOR SHOW
-    height: 200px;          //JUST FOR SHOW
-    background: red;        //JUST FOR SHOW
     display: inline-block;  
-    margin: 1em;            
+    margin: 1em;
 }
 
 .center-block {
