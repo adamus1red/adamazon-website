@@ -7,13 +7,13 @@
     
     if(!empty($_POST['searchTerm'])) {
         $search = mysql_real_escape_string($_POST['searchTerm']);
-        $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_password, $mysql_host);
+        $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_pass, $mysql_host);
         
         // Build an SQL query to search the blog_entries table
         $sql = "SELECT * FROM items WHERE items
                 LIKE '%{$search}%'";
         // Execute the query
-        $result = $oMySQL->executeSQL($sql)
+        $result = $oMySQL->executeSQL($sql);
         // Loop over results
         while($row = mysql_fetch_array($result)){
             echo "<h2>" . $row['entrytitle'] . "  <small>" . $row['entrydate'] . "</small></h2>\n";
