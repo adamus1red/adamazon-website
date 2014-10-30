@@ -21,7 +21,7 @@
                 <tbody>
                     <tr>
                         <td class="sidebar">
-                            <ul>
+                            <ul class="sidebar-content">
                                 <li>Something</li>
                                 <li>Something else</li>
                             </ul>
