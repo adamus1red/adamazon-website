@@ -16,7 +16,7 @@
                 </div>
             </div>
 		</div>
-		<div class="">
+		<div class="content center-block">
             <table>
                 <tbody>
                     <tr>
