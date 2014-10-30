@@ -11,7 +11,7 @@
                     <form role="form" method="POST" action="login.php">
                         <input type="text" placeholder="Email" class="form-control">
                         <input type="password" placeholder="Password" class="form-control">
-                        <button type="submit" class="button">Sign in</button>
+                        <button type="submit" id="search" class="button">Sign in</button>
                     </form>
                 </div>
             </div>
