@@ -80,6 +80,14 @@ form{
     text-indent: -9999px;
     width: 24px;
 }
+#login {
+
+    background: url(../images/icons/glyphicons_151_new_window.png) no-repeat center;
+    float: right;
+    height: 24px;
+    text-indent: -9999px;
+    width: 24px;
+}
 #logo {
     background: url(../images/logo.png) no-repeat center;
     float: left;

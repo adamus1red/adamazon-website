@@ -3,7 +3,7 @@
                 <h1 class="pull-left" id="logo">Adamazon</h1>
                 <div class="search">
                     <form method="POST" action="search.php">
-                        <input type="text" class="search-box"placeholder="Search">
+                        <input type="text" class="search-box" placeholder="Search">
                         <button class="button" id="search" type="submit">Search</button>
                     </form>
                 </div>
@@ -11,7 +11,7 @@
                     <form role="form" method="POST" action="login.php">
                         <input type="text" placeholder="Email" class="form-control">
                         <input type="password" placeholder="Password" class="form-control">
-                        <button type="submit" class="button">Sign in</button>
+                        <button type="submit" id="login" class="button">Sign in</button>
                     </form>
                 </div>
             </div>
