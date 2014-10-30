@@ -68,7 +68,7 @@ form{
  	border-radius: 4px;
 }
 #logo {
-  background: url(images/logo.png) no-repeat center;
+  background: url(../images/logo.png) no-repeat center;
   float: left;
   height: 100px;
   text-indent: -9999px;
