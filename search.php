@@ -5,18 +5,7 @@
    include("includes/header.php");
 	include("includes/heading.php");
     
-    if(empty($_POST['searchTerm'])) {
-    ?>
-    <form method="POST" action="search.php">
-        <table>
-            <tr>
-                <td><input type="text" name="searchTerm" size="20"></td>
-                <td><input type="submit" value="Search"></td>
-            </tr>
-        </table>
-    </form>
-<?php
-    } else {
+    if(!empty($_POST['searchTerm'])) {
         $search = mysql_real_escape_string($_POST['searchTerm']);
         $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_password, $mysql_host);
         
@@ -30,6 +19,15 @@
             echo "<h2>" . $row['entrytitle'] . "  <small>" . $row['entrydate'] . "</small></h2>\n";
             echo "<p>" . $row['entrytext'] . "</p>\n";
         }
+    } else {
+        echo "    <form method="POST" action="search.php">\n".
+"        <table>\n".
+"            <tr>\n".
+"                <td><input type=\"text\" name=\"searchTerm\" size=\"20\"></td>\n".
+"                <td><input type=\"submit\" value=\"Search\"></td>\n".
+"            </tr>\n".
+"        </table>\n".
+"    </form>\n";
     }
     include("includes/footer.php");
 ?>
