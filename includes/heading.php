@@ -28,7 +28,7 @@
                                 $result = $oMySQL->executeSQL($sql);
                                 // Loop over results
                                 for($i =0; $i < count($result); $i++){
-                                    echo "<li><a href=\"" .$base_url ."/category.php?cat=" . $result['catID'] . "\">". $row['catName'] ."</a></li>";
+                                    echo "<li><a href=\"" .$base_url ."/category.php?cat=" . $result['catID'] . "\">". $result['catName'] ."</a></li>";
                                 }
                             ?>
                             </ul>
