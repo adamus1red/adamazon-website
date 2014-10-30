@@ -5,6 +5,6 @@
 
 	$mysql_host = "database.adamazon.tk";
 	$mysql_database = "adamazon";
-	$mysql_username = "adamazon";
+	$mysql_user = "adamazon";
     $mysql_pass = "adamazon";
 ?>
