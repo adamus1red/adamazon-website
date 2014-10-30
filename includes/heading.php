@@ -4,14 +4,14 @@
                 <div class="search">
                     <form method="POST" action="search.php">
                         <input type="text" class="search-box"placeholder="Search">
-                        <button class="button" type="submit">Search</button>
+                        <button class="button" id="search" type="submit">Search</button>
                     </form>
                 </div>
                 <div class="pull-right login">
                     <form role="form" method="POST" action="login.php">
                         <input type="text" placeholder="Email" class="form-control">
                         <input type="password" placeholder="Password" class="form-control">
-                        <button type="submit" id="search" class="button">Sign in</button>
+                        <button type="submit" class="button">Sign in</button>
                     </form>
                 </div>
             </div>
