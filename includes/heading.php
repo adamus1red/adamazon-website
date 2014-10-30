@@ -22,8 +22,9 @@
                     <tr>
                         <td class="sidebar">
                             <ul class="sidebar-content">
-                                <li>Something</li>
-                                <li>Something else</li>
+                                <li>Category 1</li>
+                                <li>Category 2</li>
+                                <li>etc</li>
                             </ul>
                         </td>
                         <td class="content">
