@@ -11,10 +11,11 @@ body {
   	max-height: 340px;
 }
 .heading-content {
-    width:100%;
-    position:fixed;
+    width: 100%;
+    position: fixed;
     display: inline;
-    top:10px;
+    top: 10px;
+    height: 100px;
     margin-top: 10px
 }
 .content {
@@ -41,19 +42,19 @@ form{
 }
 
 .pull-right {
-  float: right !important;
+    float: right !important;
 }
 .pull-left {
-  float: left !important;
+    float: left !important;
 }
 .hide {
-  display: none !important;
+    display: none !important;
 }
 .show {
-  display: block !important;
+    display: block !important;
 }
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
 .button {
   	display: inline-block;
@@ -68,9 +69,9 @@ form{
  	border-radius: 4px;
 }
 #logo {
-  background: url(../images/logo.png) no-repeat center;
-  float: left;
-  height: 100px;
-  text-indent: -9999px;
-  width: 389px;
+    background: url(../images/logo.png) no-repeat center;
+    float: left;
+    height: 100px;
+    text-indent: -9999px;
+    width: 389px;
 }
