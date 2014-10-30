@@ -1,5 +1,5 @@
 <?php
-	$site_name = "Massive-octo-dubstep";
+	$site_name = "Adamazon";
 	$base_url = ".";
 /* mySQL DB stuff */
 
