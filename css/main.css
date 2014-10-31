@@ -26,6 +26,34 @@ form {
     height: 100px;
     /*margin-top: 10px*/
 }
+@media (min-width: 1000px) {
+    .content {
+        width: 960px;
+        background: #F0F0F0;
+        border: 1px solid #CCC;
+        margin: 100px auto;
+        border-radius: 4px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 740px;
+        background: #F0F0F0;
+        border: 1px solid #CCC;
+        margin: 100px auto;
+        border-radius: 4px;
+    }
+}
+@media (min-width: 500px) {
+    .content {
+        width: 460px;
+        background: #F0F0F0;
+        border: 1px solid #CCC;
+        margin: 100px auto;
+        border-radius: 4px;
+    }
+}
 .content {
     width:960px;
     background: #F0F0F0;
@@ -53,6 +81,12 @@ form {
 .login {
     display: inline;
 }
+@media (min-width: 1070px) {
+    .login {
+    display: block;
+    }
+}
+
 .sidebar {
     width: 20%;
 }
