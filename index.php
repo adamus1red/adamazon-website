@@ -32,7 +32,7 @@
                  "        </tr>\n".
                  "    </tbody>\n".
                  "</table>\n".
-                 "</article>;
+                 "</article>";
         }
     } 
     include("includes/footer.php");
