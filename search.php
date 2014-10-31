@@ -40,6 +40,7 @@
         }?>
         </tbody>
         </table>
+                <p><?php print_r($result);?><br><?php echo $search;?><br><?php echo $sql;?></p>
 <?php   } else { ?>
             <h3>No results returned</h3>
 <?php   }
