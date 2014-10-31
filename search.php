@@ -10,7 +10,7 @@
         $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_pass, $mysql_host);
         
         // Build an SQL query to search the blog_entries table
-        $sql = "SELECT * FROM `items` WHERE description LIKE '%{$search}%' OR name LIKE '%{$search}%'";
+        $sql = "SELECT * FROM `items` WHERE (`description` LIKE '%{$search}%' OR `name` LIKE '%{$search}%') AND `active` IS TRUE";
         // Execute the query
         $result = $oMySQL->executeSQL($sql);
         // Loop over results
