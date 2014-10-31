@@ -14,6 +14,7 @@
         // Execute the query
         $result = $oMySQL->executeSQL($sql);
         // Loop over results
+        if($result!=1){
         ?>
         <table>
             <thead>
@@ -28,7 +29,6 @@
             <tbody>
                 
 <?php
-        if($result!=1){
         for($i = 0; $i < (count($result)/5); $i++){
             echo "<tr>\n".
                  "    <td>".$result['prodID']."</td>\n".
@@ -40,7 +40,6 @@
         }?>
         </tbody>
         </table>
-                <p><?php print_r($result);?><br><?php echo $search;?><br><?php echo $sql;?></p>
 <?php   } else { ?>
             <h3>No results returned</h3>
 <?php   }
