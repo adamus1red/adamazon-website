@@ -9,13 +9,13 @@
    $result = $oMySQL->executeSQL($sql);
    if($result!=1){
         for($i = 0; $i < count($result); $i++){
-            echo "<article>\n".
+            echo "<article class=\"prod-display\">\n".
                  "    <a href=\"". $base_url ."/product.php?pID=". $result[$i]['prodID'] ."\">\n".
                  "        <img src=\"". $base_url . "". $result[$i]['productImage'] ."\" class=\"product-image\"alt=\"" . $result[$i]['name'] . "\">\n".
                  "    </a>\n".
                  "    <h2 class=\"prod-header\">". $result[$i]['name'] ."</h2>\n".
                  "    <p>" . $result[$i]['description'] . "</p>".
-                 "</article><hr>";
+                 "</article>";
               
         }
     } 
