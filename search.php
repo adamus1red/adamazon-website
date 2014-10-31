@@ -24,18 +24,19 @@
                     <td>Desctiption</td>
                     <td>Price</td>
                     <td>Add to cart</td>
+                </tr>
             </thead>
             <tbody>
                 
 <?php        
         for($i = 0; $i < (count($result)/4); $i++){
             echo '<tr>\n'.
-                 '    <td>'.$result['prodID'].'</td>\n'.
-                 '    <td>'.$result['name'].'</td>\n'.
-                 '    <td>'.$result['descripion'].'</td>\n'.
-                 '    <td>'.$result['price'].'</td>\n'.
-                 '    <td>Add to basket!</td>\n'.
-                 '</tr>';
+                 "    <td>".$result['prodID']."</td>\n".
+                 "    <td>".$result['name']."</td>\n".
+                 "    <td>".$result['descripion']."</td>\n".
+                 "    <td>".$result['price']."</td>\n".
+                 "    <td>Add to basket!</td>\n".
+                 "</tr>";
         }
         ?>
             </tbody>
