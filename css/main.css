@@ -34,9 +34,26 @@ form {
   background: -moz-linear-gradient(rgba(129,129,129,1), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(rgba(129,129,129,1), rgba(0,0,0,0)); /* Standard syntax */
 }
-
+@media (min-width: 768px) {
+    .content {
+        width: 740px;
+        background: #F0F0F0;
+        border: 1px solid #CCC;
+        margin: 100px auto;
+        border-radius: 4px;
+    }
+}
+@media (min-width: 500px) {
+    .content {
+        width: 460px;
+        background: #F0F0F0;
+        border: 1px solid #CCC;
+        margin: 100px auto;
+        border-radius: 4px;
+    }
+}
 .content {
-    width: 80%;
+    width:960px;
     background: #F0F0F0;
     border: 1px solid #CCC;
     margin: 100px auto;
