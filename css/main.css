@@ -79,6 +79,8 @@ form {
 }
 .login {
     display: inline;
+    right: 0;
+    position: absolute;
 }
 
 .sidebar {
