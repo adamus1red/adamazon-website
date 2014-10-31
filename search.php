@@ -40,7 +40,7 @@
         ?>
             </tbody>
         </table>
-        <p><?php print_r($result);?></p>
+        <p><?php print_r($result);?><br><?php echo $search;?></p>
 <?php
     } else {
         echo "    <form method=\"POST\" action=\"search.php\">\n".
