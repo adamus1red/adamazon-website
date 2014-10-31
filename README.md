@@ -12,14 +12,7 @@ CS312 Group Project - Shopping Site
 
 # TODO
 
-* Implement user accounts
-* check SQL injection security
-* add basket support
-* fix home link diplaying on home page
-* Add product pages
-* Add category pages
-* Add footer content
-* execute order 66
+[See the issues page](https://github.com/adamus1red/massive-octo-dubstep/issues)
 
 ---
 
