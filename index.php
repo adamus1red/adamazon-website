@@ -20,7 +20,7 @@
                  "<table style=\"width:100%\">\n".
                  "    <tbody>\n".
                  "        <tr>\n".
-                 "            <td rowspan=\"2\">\n".
+                 "            <td class=\"prod-image\"rowspan=\"2\">\n".
                  "                <a href=\"". $base_url ."/product.php?pID=". $result[$i]['prodID'] ."\">\n".
                  "                    <img src=\"". $base_url . "". $result[$i]['productImage'] ."\" class=\"product-image\"alt=\"" . $result[$i]['name'] . "\">\n".
                  "                </a>\n".

@@ -137,7 +137,9 @@ form {
 	padding: 20px;
 	margin-bottom: 15px;
 }
-
+.prod-image {
+    width: 33%;
+}
 
 /* ID's should go here */
 #search {
