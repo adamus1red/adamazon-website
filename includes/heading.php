@@ -2,7 +2,7 @@
             <div class="heading-content">
                 <h1 class="pull-left" id="logo">Adamazon</h1>
                 <div class="search">
-                    <form method="POST" action="search.php">
+                    <form method="POST" action="search.php" style="width:40%;">
                         <input type="text" class="search-box" name="searchTerm" placeholder="Search">
                         <button class="button" id="search" type="submit">Search</button>
                     </form>
