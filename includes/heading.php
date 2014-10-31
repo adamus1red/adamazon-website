@@ -23,7 +23,7 @@
                         <td class="sidebar">
                             <ul class="sidebar-content">
                             <?php 
-                                if($_SERVER['PHP_SELF'] != 'index.php'){
+                                if(basename(__FILE__) != 'index.php'){
                                     echo "<li><a href=\"". $base_url . "/\">Home</a></li>";
                                 }
                                 $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_pass, $mysql_host);
