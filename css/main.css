@@ -77,11 +77,11 @@ form {
     width: 75%;
     height: 20px;
 }
-.login {
+/*.login {
     display: inline;
     right: 0;
     position: absolute;
-}
+}*/
 
 .sidebar {
     width: 20%;
