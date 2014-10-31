@@ -80,11 +80,6 @@ form {
 .login {
     display: inline;
 }
-@media (min-width: 1070px) {
-    .login {
-    display: block;
-    }
-}
 
 .sidebar {
     width: 20%;

@@ -7,7 +7,7 @@
                                 <h1 class="pull-left" id="logo"><a href=<?php echo "". $base_url . "/";?>>Adamazon</a></h1>
                             </td>
                             <td class="search">
-                                <form method="POST" action="search.php" style="width:40%;">
+                                <form method="POST" action="search.php">
                                     <input type="text" class="search-box" name="searchTerm" placeholder="Search">
                                     <button class="button" id="search" type="submit">Search</button>
                                 </form>
