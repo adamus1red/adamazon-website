@@ -15,10 +15,32 @@
         // Execute the query
         $result = $oMySQL->executeSQL($sql);
         // Loop over results
-        while($row = mysql_fetch_array($result)){
-            echo "<h2>" . $row['entrytitle'] . "  <small>" . $row['entrydate'] . "</small></h2>\n";
-            echo "<p>" . $row['entrytext'] . "</p>\n";
+        ?>
+        <table>
+            <thead>
+                <tr>
+                    <td>Item Number</td>
+                    <td>Name</td>
+                    <td>Desctiption</td>
+                    <td>Price</td>
+                    <td>Add to cart</td>
+            </thead>
+            <tbody>
+                
+<?php        
+        for($i = 0; $i < (count($result)/4); $i++){
+            echo '<tr>\n'.
+                 '    <td>'.$result['prodID'].'</td>\n'.
+                 '    <td>'.$result['name'].'</td>\n'.
+                 '    <td>'.$result['descripion'].'</td>\n'.
+                 '    <td>'.$result['price'].'</td>\n'.
+                 '    <td>Add to basket!</td>\n'.
+                 '</tr>';
         }
+        ?>
+            </tbody>
+        </table>
+<?php
     } else {
         echo "    <form method=\"POST\" action=\"search.php\">\n".
              "        <table>\n".
@@ -31,3 +53,4 @@
     }
     include("includes/footer.php");
 ?>
+
