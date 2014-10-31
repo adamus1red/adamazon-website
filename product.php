@@ -17,14 +17,14 @@
                  "    <tbody>\n".
                  "        <tr>\n".
                  "            <td class=\"prod-image\"rowspan=\"2\">\n".
-                 "                <a href=\"". $base_url ."/product.php?pID=". $result[$i]['prodID'] ."\">\n".
-                 "                    <img src=\"". $base_url . "". $result[$i]['productImage'] ."\" class=\"product-image\"alt=\"" . $result[$i]['name'] . "\">\n".
+                 "                <a href=\"". $base_url ."/product.php?pID=". $result['prodID'] ."\">\n".
+                 "                    <img src=\"". $base_url . "". $result['productImage'] ."\" class=\"product-image\"alt=\"" . $result['name'] . "\">\n".
                  "                </a>\n".
                  "            </td>\n".
-                 "            <td class=\"prod-header\"><h2>". $result[$i]['name'] ."</h2></td>\n".
+                 "            <td class=\"prod-header\"><h2>". $result['name'] ."</h2></td>\n".
                  "        </tr>\n".
                  "        <tr>\n".
-                 "            <td class=\"prod-content\"><p>" . $result[$i]['description'] . "</p></td>\n".
+                 "            <td class=\"prod-content\"><p>" . $result['description'] . "</p></td>\n".
                  "        </tr>\n".
                  "    </tbody>\n".
                  "</table>\n".
