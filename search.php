@@ -28,7 +28,7 @@
             <tbody>
                 
 <?php
-        if($result==1){
+        if($result!=1){
         for($i = 0; $i < (count($result)/5); $i++){
             echo "<tr>\n".
                  "    <td>".$result['prodID']."</td>\n".
