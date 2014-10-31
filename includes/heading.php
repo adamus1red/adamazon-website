@@ -27,7 +27,7 @@
                                 $sql = "SELECT * FROM `category` WHERE `category`.`active` IS TRUE";
                                 $result = $oMySQL->executeSQL($sql);
                                 // Loop over results
-                                for($i =0; $i < count($result); $i++){
+                                for($i = 0; $i < (count($result)/4); $i++){
                                     echo "<li><a href=\"" .$base_url ."/category.php?cat=" . $result['catID'] . "\">". $result['catName'] ."</a></li>";
                                 }
                             ?>
