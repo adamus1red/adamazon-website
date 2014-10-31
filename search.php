@@ -29,7 +29,18 @@
             <tbody>
                 
 <?php
-        for($i = 0; $i < (count($result)/5); $i++){
+		if(!empty($result[1])){
+        for($i = 0; $i < (count($result[$i])/6); $i++){
+            echo "<tr>\n".
+                 "    <td>".$result[$i]['prodID']."</td>\n".
+                 "    <td>".$result[$i]['name']."</td>\n".
+                 "    <td>".$result[$i]['description']."</td>\n".
+                 "    <td>".$result[$i]['price']."</td>\n".
+                 "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                 "</tr>";
+        }
+     } else {
+		  for($i = 0; $i < (count($result)/$prodCol); $i++){
             echo "<tr>\n".
                  "    <td>".$result['prodID']."</td>\n".
                  "    <td>".$result['name']."</td>\n".
@@ -37,7 +48,9 @@
                  "    <td>".$result['price']."</td>\n".
                  "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
                  "</tr>";
-        }?>
+        }
+     }
+       	?>
         </tbody>
         </table>
 <?php   } else { ?>

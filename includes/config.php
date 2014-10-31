@@ -6,5 +6,7 @@
 	$mysql_host = "database.adamazon.tk";
 	$mysql_database = "adamazon";
 	$mysql_user = "adamazon";
-    $mysql_pass = "adamazon";
+   $mysql_pass = "adamazon";
+   $prodCol = 6;
+   $catCol = 4;
 ?>
