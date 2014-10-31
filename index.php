@@ -28,7 +28,7 @@
                  "            <td><h2 class=\"prod-header\">". $result[$i]['name'] ."</h2></td>\n".
                  "        </tr>\n".
                  "        <tr>\n".
-                 "            <td><p>" . $result[$i]['description'] . "</p></td>\n".
+                 "            <td><p class=\"prod-content\">" . $result[$i]['description'] . "</p></td>\n".
                  "        </tr>\n".
                  "    </tbody>\n".
                  "</table>\n".
