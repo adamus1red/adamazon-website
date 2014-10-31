@@ -20,14 +20,14 @@
             echo "<p>" . $row['entrytext'] . "</p>\n";
         }
     } else {
-        echo "    <form method="POST" action="search.php">\n".
-"        <table>\n".
-"            <tr>\n".
-"                <td><input type=\"text\" name=\"searchTerm\" size=\"20\"></td>\n".
-"                <td><input type=\"submit\" value=\"Search\"></td>\n".
-"            </tr>\n".
-"        </table>\n".
-"    </form>\n";
+        echo "    <form method=\"POST\" action=\"search.php\">\n".
+             "        <table>\n".
+             "            <tr>\n".
+             "                <td><input type=\"text\" name=\"searchTerm\" size=\"20\"></td>\n".
+             "                <td><input type=\"submit\" value=\"Search\"></td>\n".
+             "            </tr>\n".
+             "        </table>\n".
+             "    </form>\n";
     }
     include("includes/footer.php");
 ?>
