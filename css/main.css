@@ -142,11 +142,12 @@ form {
     width: 33%;
 }
 .prod-header {
-    top: 10px;
     width: 66%;
+    vertical-align: top;
 }
 .prod-content {
     width: 66%;
+    vertical-align: top;
 }
 
 /* ID's should go here */

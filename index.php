@@ -25,10 +25,10 @@
                  "                    <img src=\"". $base_url . "". $result[$i]['productImage'] ."\" class=\"product-image\"alt=\"" . $result[$i]['name'] . "\">\n".
                  "                </a>\n".
                  "            </td>\n".
-                 "            <td><h2 class=\"prod-header\">". $result[$i]['name'] ."</h2></td>\n".
+                 "            <td class=\"prod-header\"><h2>". $result[$i]['name'] ."</h2></td>\n".
                  "        </tr>\n".
                  "        <tr>\n".
-                 "            <td><p class=\"prod-content\">" . $result[$i]['description'] . "</p></td>\n".
+                 "            <td class=\"prod-content\"><p>" . $result[$i]['description'] . "</p></td>\n".
                  "        </tr>\n".
                  "    </tbody>\n".
                  "</table>\n".
