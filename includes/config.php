@@ -8,6 +8,6 @@
 	$mysql_user = "rjb12180";
     $mysql_pass = "estersum";
    $prodCol = 6;
-   $catCol = 4;
+   $catCol = 3;
 
 ?>
