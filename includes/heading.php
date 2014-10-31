@@ -1,6 +1,6 @@
 		<div class="heading">
             <div class="heading-content">
-                <h1 class="pull-left" id="logo">Adamazon</h1>
+                <h1 class="pull-left" id="logo"><a href=<?php echo "". $base_url . "/";?>Adamazon</h1>
                 <div class="search">
                     <form method="POST" action="search.php" style="width:40%;">
                         <input type="text" class="search-box" name="searchTerm" placeholder="Search">
@@ -23,6 +23,9 @@
                         <td class="sidebar">
                             <ul class="sidebar-content">
                             <?php 
+                                if($_SERVER['PHP_SELF'] != 'index.php'){
+                                    echo "<li><a href=\"". $base_url . "/\"";
+                                }
                                 $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_pass, $mysql_host);
                                 $sql = "SELECT * FROM `category` WHERE `category`.`active` IS TRUE";
                                 $result = $oMySQL->executeSQL($sql);
