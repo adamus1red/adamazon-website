@@ -28,6 +28,7 @@
             <tbody>
                 
 <?php
+        if(!empty($result)){
         for($i = 0; $i < (count($result)/5); $i++){
             echo "<tr>\n".
                  "    <td>".$result['prodID']."</td>\n".
@@ -36,11 +37,12 @@
                  "    <td>".$result['price']."</td>\n".
                  "    <td>Add to basket!</td>\n".
                  "</tr>";
-        }
-        ?>
-            </tbody>
+        }?>
+        </tbody>
         </table>
-<?php
+<?php   } else { ?>
+            <h3>No results returned</h3>
+<?php   }
     } else {
         echo "    <form method=\"POST\" action=\"search.php\">\n".
              "        <table>\n".
