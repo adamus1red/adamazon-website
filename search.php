@@ -32,7 +32,7 @@
             echo "<tr>\n".
                  "    <td>".$result['prodID']."</td>\n".
                  "    <td>".$result['name']."</td>\n".
-                 "    <td>".$result['descripion']."</td>\n".
+                 "    <td>".$result['description']."</td>\n".
                  "    <td>".$result['price']."</td>\n".
                  "    <td>Add to basket!</td>\n".
                  "</tr>";
