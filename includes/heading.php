@@ -24,7 +24,7 @@
                             <ul class="sidebar-content">
                             <?php 
                                 if($_SERVER['PHP_SELF'] != 'index.php'){
-                                    echo "<li><a href=\"". $base_url . "/\"";
+                                    echo "<li><a href=\"". $base_url . "/\">Home</a></li>";
                                 }
                                 $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_pass, $mysql_host);
                                 $sql = "SELECT * FROM `category` WHERE `category`.`active` IS TRUE";
