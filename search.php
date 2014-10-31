@@ -28,7 +28,7 @@
             <tbody>
                 
 <?php
-        for($i = 0; $i < (count($result)/4); $i++){
+        for($i = 0; $i < count($result); $i++){
             echo "<tr>\n".
                  "    <td>".$result['prodID']."</td>\n".
                  "    <td>".$result['name']."</td>\n".
@@ -40,6 +40,7 @@
         ?>
             </tbody>
         </table>
+        <p><?php print_r($result);?></p>
 <?php
     } else {
         echo "    <form method=\"POST\" action=\"search.php\">\n".
