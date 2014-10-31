@@ -28,7 +28,7 @@
             <tbody>
                 
 <?php
-        for($i = 0; $i < count($result); $i++){
+        for($i = 0; $i < (count($result)/5); $i++){
             echo "<tr>\n".
                  "    <td>".$result['prodID']."</td>\n".
                  "    <td>".$result['name']."</td>\n".
