@@ -143,3 +143,9 @@ form {
     width: 389px;
     margin-top: -20px;
 }
+#basket {
+    background: url(../images/icons/glyphicons_209_cart_in.png) no-repeat center;
+    height: 24px;
+    text-indent: -9999px;
+    width: 24px;
+}

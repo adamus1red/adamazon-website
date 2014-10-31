@@ -23,7 +23,7 @@
                     <td>Name</td>
                     <td>Desctiption</td>
                     <td>Price</td>
-                    <td>Add to cart</td>
+                    <td></td>
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +35,7 @@
                  "    <td>".$result['name']."</td>\n".
                  "    <td>".$result['description']."</td>\n".
                  "    <td>".$result['price']."</td>\n".
-                 "    <td>Add to basket!</td>\n".
+                 "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
                  "</tr>";
         }?>
         </tbody>
