@@ -1,19 +1,27 @@
 		<div class="heading">
             <div class="heading-content header-grad">
-                <h1 class="pull-left" id="logo"><a href=<?php echo "". $base_url . "/";?>>Adamazon</a></h1>
-                <div class="search">
-                    <form method="POST" action="search.php" style="width:40%;">
-                        <input type="text" class="search-box" name="searchTerm" placeholder="Search">
-                        <button class="button" id="search" type="submit">Search</button>
-                    </form>
-                </div>
-                <div class="pull-right login">
-                    <form role="form" method="POST" action="login.php">
-                        <input type="text" placeholder="Email" class="login-box">
-                        <input type="password" placeholder="Password" class="login-box">
-                        <button type="submit" id="login" class="button">Sign in</button>
-                    </form>
-                </div>
+                <table>
+                    </tbody>
+                        <tr>
+                            <td>
+                                <h1 class="pull-left" id="logo"><a href=<?php echo "". $base_url . "/";?>>Adamazon</a></h1>
+                            </td>
+                            <td class="search">
+                                <form method="POST" action="search.php" style="width:40%;">
+                                    <input type="text" class="search-box" name="searchTerm" placeholder="Search">
+                                    <button class="button" id="search" type="submit">Search</button>
+                                </form>
+                            </td>
+                            <td class="pull-right login">
+                                <form role="form" method="POST" action="login.php">
+                                    <input type="text" placeholder="Email" class="login-box">
+                                    <input type="password" placeholder="Password" class="login-box">
+                                    <button type="submit" id="login" class="button">Sign in</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 		</div>
 		<div class="content center-block">
