@@ -153,8 +153,10 @@ form {
     /*position: fixed;*/
     display: inline-block;
     bottom: 0px;
-    padding-top: 10px;
     height: 100px;
+}
+.footer-content {
+    padding-top: -20px;
 }
 .footer-grad{
   background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(129,129,129,1)); /* For Safari 5.1 to 6.0 */
