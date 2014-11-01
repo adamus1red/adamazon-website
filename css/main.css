@@ -88,6 +88,8 @@ form {
 .login {
     right: 0;
     left: auto;
+    position: absolute;
+    display: inline;
 }
 
 .sidebar {
