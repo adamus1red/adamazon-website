@@ -3,7 +3,7 @@
                 </tbody>
             </table>
         </div>        
-        <footer>
+        <footer class="footer footer-grad">
             
         </footer>
     </body>
