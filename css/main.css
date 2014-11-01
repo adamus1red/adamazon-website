@@ -63,6 +63,14 @@ form {
     height: 24px;
 }
 
+.navbar-right .dropdown-menu {
+    
+}
+.navbar-right .dropdown-menu-left {
+    right: auto;
+    left: 0;
+}
+
 .center-block {
   	display: block;
   	margin-right: auto;
@@ -77,11 +85,10 @@ form {
     width: 75%;
     height: 20px;
 }
-/*.login {
-    display: inline;
+.login {
     right: 0;
-    position: absolute;
-}*/
+    left: auto;
+}
 
 .sidebar {
     width: 20%;
