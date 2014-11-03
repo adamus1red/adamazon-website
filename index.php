@@ -34,7 +34,7 @@
                  "</table>\n".
                  "</article>";
         }
-    } 
+    }
     include("includes/footer.php");
 ?>
 
