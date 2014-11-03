@@ -9,5 +9,5 @@
     $mysql_pass = "estersum";
    $prodCol = 6;
    $catCol = 3;
-
+	 $contact_address = "contact@adamazon.tk";
 ?>
