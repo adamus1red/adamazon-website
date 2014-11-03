@@ -15,7 +15,7 @@
         // Loop over results
         if($result!=1){
         ?>
-        <table>
+        <table style="width: 100%;">
             <thead>
                 <tr>
                     <td>Item Number</td>
