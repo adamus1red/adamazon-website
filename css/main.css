@@ -150,7 +150,7 @@ form {
 }
 .footer {
     width: 100%;
-    /*position: fixed;*/
+    position: fixed;
     display: inline-block;
     bottom: 0px;
     height: 100px;
