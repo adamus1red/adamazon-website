@@ -1,6 +1,6 @@
 /* use the fancy fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400italic);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
 
 /* HTML tag's should go here */
 html {
@@ -30,6 +30,10 @@ form {
     padding-top: 10px;
     height: 100px;
   	/*background: #DFDFDF;*/
+}
+.fancy-header {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
 }
 
 .header-grad {
