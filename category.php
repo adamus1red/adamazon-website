@@ -6,7 +6,7 @@
     include("includes/heading.php");
      $request = mysql_real_escape_string($_GET['cat']);
     if(!empty($request)) {
-        $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_pass, $mysql_host);
+        $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
         
         // Build an SQL query to search the blog_entries table
              $sql = "SELECT DISTINCT i.prodID, i.name, i.description, i.price FROM `items` i INNER JOIN `is_cat` c ON (i.prodID = c.prodID) WHERE (c.catID=\"".$request."\")";
