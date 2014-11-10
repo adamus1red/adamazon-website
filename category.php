@@ -41,7 +41,7 @@
                  $j++;
         }
      } else {
-          for($i = 0; $i < (count($result)/$prodCol); $i++){
+          for($i = 0; $i < (count($result)/$config['prodCol']); $i++){
             echo "<tr>\n".
                  "    <td>".$result['prodID']."</td>\n".
                  "    <td>".$result['name']."</td>\n".

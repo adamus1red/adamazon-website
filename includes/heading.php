@@ -38,8 +38,8 @@
                                 $sql = "SELECT * FROM `category` WHERE `category`.`active` IS TRUE";
                                 $result = $hoMySQL->executeSQL($sql);
                                 // Loop over results
-                                for($i = 0; $i < (count($result)/$config['catCol']); $i++){
-                                    echo "<li><a href=\"" .$config['base_url'] ."/category.php?cat=" . $result['catID'] . "\">". $result['catName'] ."</a></li>";
+                                for($i = 0; $i < count($result); $i++){
+                                    echo "<li><a href=\"" .$config['base_url'] ."/category.php?cat=" . $result[$i]['catID'] . "\">". $result[$i]['catName'] ."</a></li>";
                                 }
                             ?>
                             </ul>
