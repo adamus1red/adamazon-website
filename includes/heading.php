@@ -1,4 +1,4 @@
-		<div class="heading">
+        <div class="heading">
             <div class="heading-content header-grad">
                 <table style="width=100%;">
                     </tbody>
@@ -13,18 +13,24 @@
                                 </form>
                             </td>
                             <td class="pull-right login">
-								        <form role="form" method="POST" action="login.php">
+                                    <?php if ($uID == '') { ?>
+                                    <form role="form" method="POST" action="login.php">
                                     <input type="text" placeholder="Email" class="login-box">
                                     <input type="password" placeholder="Password" class="login-box">
                                     <button type="submit" id="login" class="button">Sign in</button>
+                                    <?php 
+                                    } else {
+                                        echo "<p>" . checkID($uID) . "</p>";
+                                    }
+                                    ?>
                                 </form>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-		</div>
-		<div class="content center-block">
+        </div>
+        <div class="content center-block">
             <table>
                 <tbody>
                     <tr>

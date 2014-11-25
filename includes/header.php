@@ -9,6 +9,13 @@ include_once("config.php");
    }
    */
    
+    global $uID;
+    if ($_COOKIE[$config['login_cookie']]!='') {
+        $uID = $_COOKIE[$config['login_cookie']];
+    } else {
+        $uID = '';
+    }
+   
 ?>
 <!DOCTYPE html>
 <html>

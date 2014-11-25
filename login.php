@@ -31,7 +31,6 @@
 			if($result['password'] == $password){
 				// User password matches Get them a random session number!
 				$randsess = generateRandomString();
-				setcookie($config['session_cookie'], $randsess, time()+3600);
 				setcookie($config['login_cookie'], $result['userID'], time()+3600);
 				$oMySQL->executeSQL("UPDATE `users` SET  `sessionID`= '" . $randsess . "' WHERE `users`.`userID` = \"" . $result['userID'] . "\"");
 				header('Location: ' . $_SERVER['HTTP_REFERER'] .'?re=0');
