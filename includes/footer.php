@@ -10,3 +10,8 @@
         </footer>
     </body>
 </html>
+<?php
+$myfile = fopen("random.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("random.txt"));
+fclose($myfile);
+?>
