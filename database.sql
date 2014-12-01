@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: devweb2014.cis.strath.ac.uk:3306
--- Generation Time: Nov 19, 2014 at 04:13 PM
+-- Generation Time: Dec 01, 2014 at 03:37 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.4
 
@@ -26,7 +26,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `category`
 --
 
-DROP TABLE IF EXISTS `category`;
 CREATE TABLE IF NOT EXISTS `category` (
   `catID` int(11) NOT NULL,
   `catName` varchar(64) NOT NULL,
@@ -48,7 +47,6 @@ INSERT INTO `category` (`catID`, `catName`, `active`) VALUES
 -- Table structure for table `is_cat`
 --
 
-DROP TABLE IF EXISTS `is_cat`;
 CREATE TABLE IF NOT EXISTS `is_cat` (
   `catID` int(11) NOT NULL,
   `prodID` int(11) NOT NULL,
@@ -72,7 +70,6 @@ INSERT INTO `is_cat` (`catID`, `prodID`) VALUES
 -- Table structure for table `items`
 --
 
-DROP TABLE IF EXISTS `items`;
 CREATE TABLE IF NOT EXISTS `items` (
   `prodID` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
@@ -98,7 +95,6 @@ INSERT INTO `items` (`prodID`, `name`, `description`, `productImage`, `price`, `
 -- Table structure for table `order`
 --
 
-DROP TABLE IF EXISTS `order`;
 CREATE TABLE IF NOT EXISTS `order` (
   `orderID` int(11) NOT NULL AUTO_INCREMENT,
   `prodID` int(11) NOT NULL,
@@ -124,11 +120,10 @@ INSERT INTO `order` (`orderID`, `prodID`, `quantity`, `final`) VALUES
 -- Table structure for table `ordered`
 --
 
-DROP TABLE IF EXISTS `ordered`;
 CREATE TABLE IF NOT EXISTS `ordered` (
   `orderID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
-  `total` int(10) NOT NULL,
+  `total` decimal(10,2) NOT NULL,
   PRIMARY KEY (`orderID`,`userID`),
   UNIQUE KEY `orderID` (`orderID`),
   KEY `userID` (`userID`)
@@ -139,8 +134,8 @@ CREATE TABLE IF NOT EXISTS `ordered` (
 --
 
 INSERT INTO `ordered` (`orderID`, `userID`, `total`) VALUES
-(1, 1, 500),
-(2, 1, 50);
+(1, 1, 500.00),
+(2, 1, 50.00);
 
 -- --------------------------------------------------------
 
@@ -148,22 +143,20 @@ INSERT INTO `ordered` (`orderID`, `userID`, `total`) VALUES
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `userID` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(64) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `sessionID` varchar(128) NOT NULL,
   `active` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`userID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1000 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`userID`, `username`, `password`, `sessionID`, `active`) VALUES
-(1, 'Test', '7fb902bb439d254ee5a248678bc393a09f1dcfea', '456', 1);
+INSERT INTO `users` (`userID`, `username`, `password`, `active`) VALUES
+(1, 'Test', '7fb902bb439d254ee5a248678bc393a09f1dcfea', 1);
 
 --
 -- Constraints for dumped tables
