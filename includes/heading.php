@@ -4,42 +4,36 @@ include_once("config.php");
 include_once("commonFunctions.php");
 ?>
 		<div class="heading">
-            <div class="heading-content header-grad">
-                <table style="width=100%;">
-                    </tbody>
-                        <tr >
-                            <td style="width=103px;">
-                                <a href=<?php echo "". $config['base_url'] . "/index";?>><h1 class="pull-left" id="logo">Adamazon</h1></a>
-                            </td>
-                            <td class="search">
-                                <form method="POST" action="search.php" style="margin-right: auto; margin-left: auto; display: inline-block;">
-                                    <input type="text" class="search-box" name="searchTerm" placeholder="Search">
-                                    <button class="button" id="search" type="submit">Search</button>
-                                </form>
-                            </td>
-                            <td class="pull-right login">
-                                    <?php if ($uID == '') { ?>
-                                    <form role="form" method="POST" action="login">
-										<input type="text" placeholder="Email" class="login-box">
-										<input type="password" placeholder="Password" class="login-box">
-										<button type="submit" id="login" class="button">Sign in</button>
-									</form>
-                                    <?php 
-                                    } else {
-										$sql = "SELECT * FROM `users` WHERE `sessionID` = '" . $uID . "' AND `active` IS TRUE";
-										$oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
-								        $result = $oMySQL->executeSQL($sql);
-        								if($result['sessionID'] == $uID){
-								            echo "<h1><a href=\"". $config['base_url'] . "/user\">" . $result['username'] . "</a></h1>";
-        								} else {
-											die("Error 2858");
-										}
-                                    }
-                                    ?>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="heading-content header-grad parent">
+                <div class="headleft">
+                                <a href=<?php echo "". $config['base_url'] . "/index";?>><h1 id="logo">Adamazon</h1></a>
+				</div>
+				<div class="headcenter">
+					<form method="POST" action="search.php">
+                        <input type="text" class="search-box" name="searchTerm" placeholder="Search">
+                        <button class="button" id="search" type="submit">Search</button>
+                    </form>
+				</div>
+				<div class="headright">
+			    <?php if ($uID == '') { ?>
+					<form role="form" method="POST" action="login">
+						<input type="text" placeholder="Email" class="login-box">
+						<input type="password" placeholder="Password" class="login-box">
+						<button type="submit" id="login" class="button">Sign in</button>
+					</form>
+                <?php 
+				} else {
+					$sql = "SELECT * FROM `users` WHERE `sessionID` = '" . $uID . "' AND `active` IS TRUE";
+					$oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
+					$result = $oMySQL->executeSQL($sql);
+					if($result['sessionID'] == $uID){
+						echo "<h1><a href=\"". $config['base_url'] . "/user\">" . $result['username'] . "</a></h1>";
+					} else {
+						die("Error 2858");
+					}
+				}
+				?>
+                </div>
             </div>
         </div>
         <div class="content center-block">

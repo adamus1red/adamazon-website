@@ -15,6 +15,22 @@ form {
     margin: 1em;
 }
 
+
+/* Grid layout */
+
+.headleft, .headcenter, .headright{
+    float:left;
+    width:32%;
+    border:1px solid #CEDCEA; 
+    padding:5px;
+
+}
+.wrap  {
+    margin-bottom: 15px;
+    padding: 10px;
+    color: #0A416B;
+    clear:both;
+}
 /* Classes should go here */
 .heading {
 	position: fixed;
@@ -42,24 +58,6 @@ form {
   background: -moz-linear-gradient(rgba(129,129,129,1), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(rgba(129,129,129,1), rgba(0,0,0,0)); /* Standard syntax */
 }
-@media (min-width: 768px) {
-    .content {
-        width: 740px;
-        background: #F0F0F0;
-        border: 1px solid #CCC;
-        margin: 100px auto;
-        border-radius: 4px;
-    }
-}
-@media (min-width: 500px) {
-    .content {
-        width: 460px;
-        background: #F0F0F0;
-        border: 1px solid #CCC;
-        margin: 100px auto;
-        border-radius: 4px;
-    }
-}
 .content {
     width:960px;
     background: #F0F0F0;
@@ -71,13 +69,6 @@ form {
     height: 24px;
 }
 
-.navbar-right .dropdown-menu {
-    
-}
-.navbar-right .dropdown-menu-left {
-    right: auto;
-    left: 0;
-}
 
 .center-block {
   	display: block;
@@ -176,7 +167,7 @@ form {
     padding: 25px;
 }
 .prod-image {
-    width: 33%;
+    width: 66%;
 }
 .prod-header {
     width: 66%;
@@ -187,6 +178,7 @@ form {
     width: 66%;
     vertical-align: top;
 }
+
 .footer {
     width: 100%;
     position: fixed;
@@ -219,7 +211,6 @@ form {
 }
 #logo {
     background: url(../images/logo.png) no-repeat center;
-    float: left;
     height: 100px;
     text-indent: -9999px;
     width: 389px;
