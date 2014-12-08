@@ -5,7 +5,7 @@
    include("includes/header.php");
     include("includes/heading.php");
    $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
-   $sql = "SELECT * FROM `items` WHERE `active` IS TRUE LIMIT 10";
+   $sql = "SELECT * FROM `items` WHERE `active` IS TRUE ORDER BY `items`.`prodID` DESC LIMIT 10";
    $result = $oMySQL->executeSQL($sql);
    if($result!=1){
         for($i = 0; $i < count($result); $i++){

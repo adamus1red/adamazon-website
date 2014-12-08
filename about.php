@@ -34,7 +34,7 @@
             </table>
             <hr>
             <h1 style="font-family: 'Crimson Text', serif;"><i>Contact Us</i></h1>
-            <p><a href="mailto:<?php echo $config['contact_address'];?>" class="button button-main"><?php echo $contact_address;?></a></p>
+            <p><a href="mailto:<?php echo $config['contact_address'];?>" class="button button-main"><?php echo $config['contact_address'];?></a></p>
             </div>
             
 <?php

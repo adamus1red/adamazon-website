@@ -29,7 +29,7 @@
             <tbody>
                 
 <?php
-		if(!empty($result[1])){
+		if(!empty($result[1]['name'])){
         for($i = 0; $i < (count($result[$i])/6); $i++){
             echo "<tr>\n".
                  "    <td>".$result[$i]['prodID']."</td>\n".
