@@ -17,9 +17,9 @@ include_once("commonFunctions.php");
 				<div class="headright">
 			    <?php if ($uID == '') { ?>
 					<form role="form" method="POST" action="login">
-						<input type="text" placeholder="Email" class="login-box">
-						<input type="password" placeholder="Password" class="login-box">
-						<button type="submit" id="login" class="button">Sign in</button>
+    					<input name="username" class="login-box" placeholder="Email address" type="text" id="username">
+    			        <input name="password" class="login-box" placeholder="Password" type="password" id="password">
+						<input class="button" id="login" type="submit" name="Submit" value="Login">
 					</form>
                 <?php 
 				} else {
@@ -38,7 +38,7 @@ include_once("commonFunctions.php");
 						 "</ul>".
 						 "<div style=\"clear:both\"></div>";
 					} else {
-						die("Error 2858");
+						header('Location: login?re=0');
 					}
 				}
 				?>
