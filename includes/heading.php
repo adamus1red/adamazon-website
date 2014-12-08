@@ -27,7 +27,7 @@ include_once("commonFunctions.php");
 					$oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
 					$result = $oMySQL->executeSQL($sql);
 					if($result['sessionID'] == $uID){
-						echo "<h1><a href=\"". $config['base_url'] . "/user\">" . $result['username'] . "</a></h1>";
+						echo "<h1 class=\"pull-right\"><a href=\"". $config['base_url'] . "/user\">" . $result['username'] . "</a></h1>";
 					} else {
 						die("Error 2858");
 					}
