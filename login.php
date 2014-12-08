@@ -10,13 +10,14 @@
 		}
 		return $randomString;
 	}
-    echo "0";
 	if((empty($_POST['password']) ) || (empty($_POST['username']))) {
 		$site_page_title = "User Login";
 		include("includes/header.php");
     	include("includes/heading.php");
     	//Login form
-
+		if($_GET['re'] == 2){
+			echo "<h1>Bad login</h1>";
+		}
     	echo '<form role="form" method="POST" action="login.php">'.
             '<input name="username" type="text" id="username">'.
 			'<input name="password" type="password" id="password">'.
@@ -25,9 +26,11 @@
 
     	include("includes/footer.php");
 	} else if((isset($_POST['password'])) || (isset($_POST['username']))){
-		echo "1";
 		$rawpassword = $_POST['password'];
 		$rawusername = $_POST['username'];
+		if (!filter_var($rawusername, FILTER_VALIDATE_EMAIL)) {
+			//valid
+		
 		$username = mysql_escape_string($rawusername);
     	$password = sha1("". $config['pass_salt'] . $rawpassword, $raw_output = null);
 		$sql = "SELECT * FROM users WHERE username='" . $username . "' and password='" . $password . "'";
@@ -49,6 +52,9 @@
 		} else {
 			echo "break 2";
 			header('Location: ' . $_SERVER['HTTP_REFERER'] . '?re=1');
+		}
+		} else {
+			header('Location: ' . $_SERVER['HTTP_REFERER'] . '?re=2');
 		}
 	}
 
