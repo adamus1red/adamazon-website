@@ -1,4 +1,9 @@
-        <div class="heading">
+<?php
+include_once("mysql.php");
+include_once("config.php");
+include_once("commonFunctions.php");
+?>
+		<div class="heading">
             <div class="heading-content header-grad">
                 <table style="width=100%;">
                     </tbody>
@@ -20,7 +25,8 @@
                                     <button type="submit" id="login" class="button">Sign in</button>
                                     <?php 
                                     } else {
-                                        echo "<p>" . checkID($uID) . "</p>";
+										$cFunctions = new CommonFunctions();
+                                        echo "<p>" . $cFunctions->checkID($uID) . "</p>";
                                     }
                                     ?>
                                 </form>
