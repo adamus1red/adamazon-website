@@ -15,15 +15,15 @@
                     <tr style="padding: 10px;">
                         <td width="25%">
                             <h1 style="font-family: 'Crimson Text', serif;"><i>Adam McGhie</i></h1>
-                            <p>Wrote the back-end and base CSS</p>
+                            <p>Wrote the back-end, CSS, UI, categories, product pages, pretty much <strong>EVERYTHING</strong></p>
                         </td>
                         <td width="25%">
                             <h1 style="font-family: 'Crimson Text', serif;"><i>Thomas Sinclair</i></h1>
-                            <p>Wrote some...</p>
+                            <p>Wrote some... well nothing really</p>
                         </td>
                         <td width="25%">
                             <h1 style="font-family: 'Crimson Text', serif;"><i>Grant Toghill</i></h1>
-                            <p>Wrote some CSS</p>
+                            <p>Didn't write anything</p>
                         </td>
                         <td width="25%">
                             <h1 style="font-family: 'Comic Sans MS', cursive, sans-serif;"><i>Darren Tang</i></h1>

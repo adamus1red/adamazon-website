@@ -9,7 +9,7 @@ include_once("commonFunctions.php");
                     </tbody>
                         <tr >
                             <td style="width=103px;">
-                                <a href=<?php echo "". $config['base_url'] . "/";?>><h1 class="pull-left" id="logo">Adamazon</h1></a>
+                                <a href=<?php echo "". $config['base_url'] . "/index";?>><h1 class="pull-left" id="logo">Adamazon</h1></a>
                             </td>
                             <td class="search">
                                 <form method="POST" action="search.php" style="margin-right: auto; margin-left: auto; display: inline-block;">
@@ -19,7 +19,7 @@ include_once("commonFunctions.php");
                             </td>
                             <td class="pull-right login">
                                     <?php if ($uID == '') { ?>
-                                    <form role="form" method="POST" action="login.php">
+                                    <form role="form" method="POST" action="login">
 										<input type="text" placeholder="Email" class="login-box">
 										<input type="password" placeholder="Password" class="login-box">
 										<button type="submit" id="login" class="button">Sign in</button>
@@ -30,7 +30,7 @@ include_once("commonFunctions.php");
 										$oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
 								        $result = $oMySQL->executeSQL($sql);
         								if($result['sessionID'] == $uID){
-								            echo "<h1><a href=\"". $config['base_url'] . "/user.php\">" . $result['username'] . "</a></h1>";
+								            echo "<h1><a href=\"". $config['base_url'] . "/user\">" . $result['username'] . "</a></h1>";
         								} else {
 											die("Error 2858");
 										}
@@ -49,15 +49,13 @@ include_once("commonFunctions.php");
                         <td class="sidebar">
                             <ul class="sidebar-content">
                             <?php 
-                                if(basename(__FILE__) != 'index.php'){
-                                    echo "<li><a href=\"". $config['base_url'] . "/\">Home</a></li>";
-                                }
+                                echo "<li><a href=\"". $config['base_url'] . "/index\">Home</a></li>";
                                 $hoMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
                                 $sql = "SELECT * FROM `category` WHERE `category`.`active` IS TRUE";
                                 $result = $hoMySQL->executeSQL($sql);
                                 // Loop over results
                                 for($i = 0; $i < count($result); $i++){
-                                    echo "<li><a href=\"" .$config['base_url'] ."/category.php?cat=" . $result[$i]['catID'] . "\">". $result[$i]['catName'] ."</a></li>";
+                                    echo "<li><a href=\"" .$config['base_url'] ."/category?cat=" . $result[$i]['catID'] . "\">". $result[$i]['catName'] ."</a></li>";
                                 }
                             ?>
                             </ul>

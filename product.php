@@ -17,8 +17,8 @@
                  "    <tbody>\n".
                  "        <tr>\n".
                  "            <td class=\"prod-image\"rowspan=\"2\">\n".
-                 "                <a href=\"". $base_url ."/product.php?pID=". $result['prodID'] ."\">\n".
-                 "                    <img src=\"". $base_url . "". $result['productImage'] ."\" class=\"product-image\"alt=\"" . $result['name'] . "\">\n".
+                 "                <a href=\"". $config['base_url'] ."/product?pID=". $result['prodID'] ."\">\n".
+                 "                    <img src=\"". $config['base_url'] . "". $result['productImage'] ."\" class=\"product-image\"alt=\"" . $result['name'] . "\">\n".
                  "                </a>\n".
                  "            </td>\n".
                  "            <td class=\"prod-header\"><h2>". $result['name'] ."</h2></td>\n".

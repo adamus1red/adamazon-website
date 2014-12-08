@@ -13,6 +13,7 @@ include_once("commonFunctions.php");
     
     if (isset($_COOKIE[$config['login_cookie']])) {
         $uID = $_COOKIE[$config['login_cookie']];
+		setcookie($config['login_cookie'], $_COOKIE[$config['login_cookie']], time()+3600);
     } else {
         $uID = 0;
     }

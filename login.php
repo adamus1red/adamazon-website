@@ -45,7 +45,7 @@
 			$randsess = generateRandomString();
 			setcookie($config['login_cookie'], $randsess, time()+3600);
 			$lMySQL->executeSQL("UPDATE  `users` SET  `sessionID` =  \"" . $randsess . "\" WHERE `userID` = " . $result['userID']);
-			header('Location: ' . $config['base_url'] . 'index.php?re=0');
+			header('Location: index.php?re=0');
 		} else {
 			echo "break 2";
 			header('Location: ' . $_SERVER['HTTP_REFERER'] . '?re=1');
