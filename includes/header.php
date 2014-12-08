@@ -1,6 +1,7 @@
 <?php
 include_once("mysql.php");
 include_once("config.php");
+include_once("commonFunctions.php");
 /*
    if (eregi("MSIE",getenv("HTTP_USER_AGENT")) ||
        eregi("Internet Explorer",getenv("HTTP_USER_AGENT"))) {
@@ -9,11 +10,11 @@ include_once("config.php");
    }
    */
    
-    global $uID;
-    if ($_COOKIE[$config['login_cookie']]!='') {
+    
+    if (isset($_COOKIE[$config['login_cookie']])) {
         $uID = $_COOKIE[$config['login_cookie']];
     } else {
-        $uID = '';
+        $uID = 0;
     }
    
 ?>
