@@ -13,24 +13,16 @@ class commonFunctions {
 
    }
    */
-    function checkID($user_ID) {
-        $sql = "SELECT `users`.`userID` FROM `users` WHERE `userID` IS '" . $userID . "' AND `active` IS TRUE";
+    function checkID($sessionID) {
+		include_once('config.php');
+        $sql = "SELECT `users`.`sessionID` FROM `users` WHERE `sessionID` IS '" . $sessionID . "' AND `active` IS TRUE";
         $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
         $result = $oMySQL->executeSQL($sql);
-        if(($result != 1) && (count($result)==1)) {
-            $sql = "SELECT `users`.`username` FROM `users` WHERE `userID` IS '" . $userID . "' AND `active` IS TRUE";
+        if(trim($result['sessionID']," \t\n\r\0\x0B") == trim($sessionID," \t\n\r\0\x0B")){
+            $sql = "SELECT `users`.`username` FROM `users` WHERE `sessionID` IS '" . $sessionID . "' AND `active` IS TRUE";
             $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
             $result = $oMySQL->executeSQL($sql);
             return $result['username'];
         }        
-    }
-   
-	function generateRandomString($length = 32) {
-		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		$randomString = '';
-		for ($i = 0; $i < $length; $i++) {
-			$randomString .= $characters[rand(0, strlen($characters) - 1)];
-		}
-		return $randomString;
-	}
+    } 
 }
