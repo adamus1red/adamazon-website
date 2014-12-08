@@ -13,9 +13,9 @@
                  "<table style=\"width:100%\">\n".
                  "    <tbody>\n".
                  "        <tr>\n".
-                 "            <td class=\"prod-image\"rowspan=\"2\">\n".
-                 "                <a href=\"". $config['base_url'] ."/product.php?pID=". $result[$i]['prodID'] ."\">\n".
-                 "                    <img src=\"". $config['base_url'] . "". $result[$i]['productImage'] ."\" class=\"product-image\"alt=\"" . $result[$i]['name'] . "\">\n".
+                 "            <td rowspan=\"2\">\n".
+                 "                <a href=\"". $config['base_url'] ."/product?pID=". $result[$i]['prodID'] ."\">\n".
+                 "                    <img src=\"". $config['base_url'] . "". $result[$i]['productImage'] ."\" class=\"prod-image\"alt=\"" . $result[$i]['name'] . "\">\n".
                  "                </a>\n".
                  "            </td>\n".
                  "            <td class=\"prod-header\"><h2 class=\"fancy-header\">". $result[$i]['name'] ."</h2></td>\n".
