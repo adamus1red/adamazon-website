@@ -10,6 +10,7 @@
 		}
 		return $randomString;
 	}
+	if(!isset($_GET['logout'])){
 	if((empty($_POST['password']) ) || (empty($_POST['username']))) {
 		$site_page_title = "User Login";
 		include("includes/header.php");
@@ -56,6 +57,10 @@
 		} else {
 			header('Location: ' . $_SERVER['HTTP_REFERER'] . '?re=2');
 		}
+	}
+	} else {
+		setcookie($config['login_cookie'], null, -1);
+		header('Location: index.php?re=0');
 	}
 
 ?>

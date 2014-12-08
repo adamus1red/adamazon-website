@@ -16,12 +16,12 @@
                  "<table style=\"width:100%\">\n".
                  "    <tbody>\n".
                  "        <tr>\n".
-                 "            <td class=\"prod-image\"rowspan=\"2\">\n".
+                 "            <td rowspan=\"2\">\n".
                  "                <a href=\"". $config['base_url'] ."/product?pID=". $result['prodID'] ."\">\n".
-                 "                    <img src=\"". $config['base_url'] . "". $result['productImage'] ."\" class=\"product-image\"alt=\"" . $result['name'] . "\">\n".
+                 "                    <img src=\"". $config['base_url'] . "". $result['productImage'] ."\" class=\"prod-image\"alt=\"" . $result['name'] . "\">\n".
                  "                </a>\n".
                  "            </td>\n".
-                 "            <td class=\"prod-header\"><h2>". $result['name'] ."</h2></td>\n".
+                 "            <td class=\"prod-header\"><h2 class=\"fancy-header\">". $result['name'] ."</h2></td>\n".
                  "        </tr>\n".
                  "        <tr>\n".
                  "            <td class=\"prod-content\"><p>" . $result['description'] . "</p></td>\n".

@@ -27,7 +27,16 @@ include_once("commonFunctions.php");
 					$oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
 					$result = $oMySQL->executeSQL($sql);
 					if($result['sessionID'] == $uID){
-						echo "<h1 class=\"pull-right\"><a href=\"". $config['base_url'] . "/user\">" . $result['username'] . "</a></h1>";
+						echo "<ul id=\"dropdown\">".
+							 "<li><h1><a href=\"#\" onmouseover=\"mopen('uDrop')\" onmouseout=\"mclosetime()\">" . $result['username'] ."</a></h1>".
+							 "	<div id=\"uDrop\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">".
+							 "		<a href=\"". $config['base_url'] . "/user\">Control Panel</a>".
+							 "		<a href=\"". $config['base_url'] . "/login?logout=1\">Logout</a>".
+							 "		<a href=\"#\">Orders</a>".
+							 "	</div>".
+							 "</li>".
+						 "</ul>".
+						 "<div style=\"clear:both\"></div>";
 					} else {
 						die("Error 2858");
 					}

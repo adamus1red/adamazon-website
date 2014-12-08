@@ -4,8 +4,9 @@
 
 /* HTML tag's should go here */
 html {
-  font-family: 'Raleway', Helvetica, sans-serif;
+	font-family:'Raleway', Helvetica, sans-serif;
 }
+
 body {
   margin: 0;
   background: url(../images/background.png);
@@ -221,4 +222,62 @@ form {
     height: 24px;
     text-indent: -9999px;
     width: 24px;
+}
+
+/* Dropdown menu stuff */
+#dropdown{
+	margin: 0;
+	padding: 0;
+	z-index: 30
+}
+
+#dropdown li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 11px arial
+}
+
+#dropdown li a{
+	display: block;
+	margin: 0 1px 0 0;
+	padding: 4px 10px;
+	width: 60px;
+	/*background: #5970B2;*/
+	/*color: #FFF;*/
+	text-align: center;
+	text-decoration: none
+}
+
+#dropdown li a:hover{
+	/*background: #49A3FF*/
+}
+
+#dropdown div{
+	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border: 1px solid #5970B2
+}
+
+#dropdown div a {	
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: auto;
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: #EAEBD8;
+	color: #2875DE;
+	font: 11px arial
+}
+
+#dropdown div a:hover {
+	background: #49A3FF;
+	color: #FFF
 }
