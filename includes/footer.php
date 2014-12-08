@@ -12,8 +12,8 @@
 </html>
 <!--
 <?php
-$myfile = fopen("includes/random.txt", "r") or die("Unable to open file!");
-echo fread($myfile,filesize("includes/random.txt"));
-fclose($myfile);
+#$myfile = fopen("includes/random.txt", "r") or die("Unable to open file!");
+#echo fread($myfile,filesize("includes/random.txt"));
+#fclose($myfile);
 ?>
 -->
