@@ -20,16 +20,22 @@ include_once("commonFunctions.php");
                             <td class="pull-right login">
                                     <?php if ($uID == '') { ?>
                                     <form role="form" method="POST" action="login.php">
-                                    <input type="text" placeholder="Email" class="login-box">
-                                    <input type="password" placeholder="Password" class="login-box">
-                                    <button type="submit" id="login" class="button">Sign in</button>
+										<input type="text" placeholder="Email" class="login-box">
+										<input type="password" placeholder="Password" class="login-box">
+										<button type="submit" id="login" class="button">Sign in</button>
+									</form>
                                     <?php 
                                     } else {
-										$cFunctions = new CommonFunctions();
-                                        echo "<p>" . $cFunctions->checkID($uID) . "</p>";
+										$sql = "SELECT * FROM `users` WHERE `sessionID` = '" . $uID . "' AND `active` IS TRUE";
+										$oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
+								        $result = $oMySQL->executeSQL($sql);
+        								if($result['sessionID'] == $uID){
+								            echo "<h1><a href=\"". $config['base_url'] . "/user.php\">" . $result['username'] . "</a></h1>";
+        								} else {
+											die("Error 2858");
+										}
                                     }
                                     ?>
-                                </form>
                             </td>
                         </tr>
                     </tbody>
