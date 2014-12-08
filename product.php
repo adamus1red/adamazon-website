@@ -7,11 +7,11 @@
     
     $request = mysql_real_escape_string($_GET['pID']);
     
-    $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_pass, $mysql_host);
+    $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
     $sql = "SELECT * FROM `rjb12180`.`items` WHERE `prodID` = " . $request . " LIMIT 0, 30 ";
     $result = $oMySQL->executeSQL($sql);
     if($result!=1||!empty($result)) {
-		for($i = 0; $i < (count($result)/$prodCol); $i++){
+		for($i = 0; $i < (count($result)/$config['prodCol']); $i++){
 			echo "<article class=\"prod-display\">\n".
                  "<table style=\"width:100%\">\n".
                  "    <tbody>\n".

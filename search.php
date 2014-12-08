@@ -7,7 +7,7 @@
     
     if(!empty($_POST['searchTerm'])) {
         $search = mysql_real_escape_string($_POST['searchTerm']);
-        $oMySQL = new MySQL($mysql_database, $mysql_user, $mysql_pass, $mysql_host);
+        $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
         
         // Build an SQL query to search the blog_entries table
         $sql = "SELECT * FROM `items` WHERE (`description` LIKE '%{$search}%' OR `name` LIKE '%{$search}%') AND `active` IS TRUE";
