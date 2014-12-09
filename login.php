@@ -1,7 +1,6 @@
 <?php
     include_once("includes/config.php");
     include_once("includes/mysql.php");
-    include_once("includes/commonFunctions.php");
     function generateRandomString($length = 32) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $randomString = '';
@@ -24,13 +23,31 @@
                 $password = sha1("". $config['pass_salt'] . $rawNewPass, $raw_output = null);
                 echo "<p>" . $password . "</p>";
                 echo "<p>2</p>";
+                $lMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
                 $randsess = generateRandomString();
                 setcookie($config['login_cookie'], $randsess, time()+3600);
+                if($lMySQL->executeSQL("SELECT * FROM `users` WHERE `username` = '" . mysql_real_escape_string($rawNewUser) . "'") == 1){
                 $sql = "INSERT INTO  `users` (`userID` ,`username` ,`password` ,`sessionID` ,`active`) VALUES (NULL ,'" . $rawNewUser . "',  '" . $password . "', '".$randsess."' ,  '1');";
                 echo "<p>3</p>";
-                $lMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
                 $lMySQL->executeSQL($sql);
+                if (function_exists('mail')){
+                // Email user account confirmation
+                $to      = mysql_real_escape_string($rawNewUser);
+                $subject = "Adamazon Login";
+                $message = "Hello\n".
+                           "You are now registered for Adamazon!\n".
+                           "Your username is: " . mysql_real_escape_string($rawNewUser) . "\n".
+                           "and your password is: " . mysql_real_escape_string($rawNewPass);
+                $headers = "From: webmaster@adamazon.tk" . "\r\n" .
+                           "Reply-To: webmaster@adamazon.tk" . "\r\n" .
+                           "X-Mailer: PHP/" . phpversion();
+
+                mail($to, $subject, $message, $headers);
+                }
                 header('Location: index?re=0');
+                } else {
+                    header('Location: login?re=2&reg=1');
+                }
             } else {
                 header('Location: login?re=1&reg=1');
             }
@@ -40,7 +57,11 @@
             include("includes/heading.php");
             echo "<p>1</p>";
             if(isset($_GET['re'])){
-                echo "<h1>Invalid stuff submitted</h1>";
+                if($_GET['re'] == 1){
+                echo "<h1 class=\"button button-main\">Invalid stuff submitted</h1>";
+                } else if ($_GET['re'] == 2){
+                    echo "<h1 class=\"button button-main\">Username already exists</h1>";
+                }
             }
             echo '<form role="form" method="POST" action="login?reg">'.
                  '<input name="username" type="text" placeholder="Email address" id="username">'.
@@ -48,6 +69,23 @@
                  '<input name="password2" type="password" placeholder="Confirm Password" id="password">'.
                  '<input class="button" id="login" type="submit" name="Submit" value="Login">'.
                  '</form>';
+            
+            echo "    <script type='text/javascript'>
+        $(document).ready(function () {
+            $('#username').keyup(function () {
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                if (re.test($(this).val())) {
+
+                    $(this).css(\"background-color\", \"green\");
+
+                } else {
+
+                    $(this).css(\"background-color\", \"red\");
+                }
+            });
+        });
+    </script>";
             include("includes/footer.php");
         }
     } else {
@@ -57,7 +95,7 @@
             include("includes/heading.php");
             //Login form
             if(isset($_GET['re'])){
-                echo "<h1>Bad login</h1>";
+                echo "<h1 class=\"button button-main\">Bad login</h1>";
                 echo "<h3><a href=\"" . $config['base_url'] . "/login?reg=1\">Register Here</a></h3>";
             }
             echo '<form role="form" method="POST" action="login">'.
@@ -65,7 +103,22 @@
                  '<input name="password" type="password" placeholder="Email address" id="password">'.
                  '<input class="button" id="login" type="submit" name="Submit" value="Login">'.
                  '</form>';
+            echo "    <script type='text/javascript'>
+        $(document).ready(function () {
+            $('#username').keyup(function () {
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+                if (re.test($(this).val())) {
+
+                    $(this).css(\"background-color\", \"green\");
+
+                } else {
+
+                    $(this).css(\"background-color\", \"red\");
+                }
+            });
+        });
+    </script>";
             include("includes/footer.php");
         } else if((isset($_POST['password'])) || (isset($_POST['username']))){
             $rawpassword = $_POST['password'];
@@ -84,6 +137,8 @@
             } else {
                 header('Location: login?re=1');
             }
+        } else {
+            header('Location: index');
         }
     }
 

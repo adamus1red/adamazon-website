@@ -35,7 +35,7 @@
                  "    <td>".$result[$i]['prodID']."</td>\n".
                  "    <td>".$result[$i]['name']."</td>\n".
                  "    <td>".$result[$i]['description']."</td>\n".
-                 "    <td>".$result[$i]['price']."</td>\n".
+                 "    <td>&pound;".$result[$i]['price']."</td>\n".
                  "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
                  "</tr>";
                  $j++;
