@@ -15,19 +15,19 @@
                     <tr style="padding: 10px;">
                         <td width="25%">
                             <h1 style="font-family: 'Crimson Text', serif;"><i>Adam McGhie</i></h1>
-                            <p>Wrote the back-end, CSS, UI, categories, product pages, pretty much <strong>EVERYTHING</strong></p>
+                            <p>Wrote the back-end database & SQL queries, CSS, UI, categories, product pages, v1.0 front end</p>
                         </td>
                         <td width="25%">
                             <h1 style="font-family: 'Crimson Text', serif;"><i>Thomas Sinclair</i></h1>
-                            <p>Wrote some... well nothing really</p>
+                            <p>Designed & implimented v2.0 front end</p>
                         </td>
                         <td width="25%">
                             <h1 style="font-family: 'Crimson Text', serif;"><i>Grant Toghill</i></h1>
-                            <p>Didn't write anything</p>
+                            <p>Added his name to the readme file</p>
                         </td>
                         <td width="25%">
                             <h1 style="font-family: 'Comic Sans MS', cursive, sans-serif;"><i>Darren Tang</i></h1>
-                            <p style="font-family: 'Comic Sans MS', cursive, sans-serif;">Wrote some html</p>
+                            <p style="font-family: 'Comic Sans MS', cursive, sans-serif;">Did v0.1 front end and wrote the final report</p>
                         </td>
                     </tr>
                 </tbody>
