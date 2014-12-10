@@ -28,6 +28,6 @@
                  "</article>";
         }
     } 
-    include("includes/footer.php"); // footer (duh), also closes the table that formats everything iirc
+    include("includes/footer.php"); // footer (duh), also closes the div that formats everything iirc
 ?>
 

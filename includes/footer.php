@@ -1,7 +1,5 @@
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+				</div>
+			</div>
         </div>        
         <footer class="footer footer-grad">
             <p class="footer-content">
