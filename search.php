@@ -1,9 +1,9 @@
 <?php
-    include_once("includes/config.php");
-    include_once("includes/mysql.php");
-    $site_page_title = "Search";
-       include("includes/header.php");
-    include("includes/heading.php");
+	include_once("includes/config.php");
+	include_once("includes/mysql.php");
+   $site_page_title = "Search";
+   include("includes/header.php");
+	include("includes/heading.php");
     
     if(!empty($_POST['searchTerm'])) {
         $search = mysql_real_escape_string($_POST['searchTerm']);
@@ -16,6 +16,7 @@
         // Loop over results
         if($result!=1){
         ?>
+        <div style="margin-top: 250px; margin-left: 40px; margin-right: 40px;">
         <table style="width: 100%;">
             <thead>
                 <tr>
@@ -27,31 +28,39 @@
                 </tr>
             </thead>
             <tbody>
+        </div>
                 
 <?php
-if($result[1]['name'] != null){
-    for($i = 0; $i < (count($result[$i])/6); $i++){
-        echo "<tr>\n".
-             "    <td>".$result[$i]['prodID']."</td>\n".
-             "    <td>".$result[$i]['name']."</td>\n".
-             "    <td>".$result[$i]['description']."</td>\n".
-             "    <td>".$result[$i]['price']."</td>\n".
-             "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
-             "</tr></tbody></table>";
-    }
-} else if ($result['name'] != null) {
-    for($i = 0; $i < (count($result)/$config['prodCol']); $i++){
-        echo "<tr>\n".
-             "    <td>".$result['prodID']."</td>\n".
-             "    <td>".$result['name']."</td>\n".
-             "    <td>".$result['description']."</td>\n".
-             "    <td>".$result['price']."</td>\n".
-             "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
-             "</tr></tbody></table>";
-    }
-} else {
-	echo "<h3>No results returned</h3>";
-}
+		if(!empty($result[1]['name'])){
+        for($i = 0; $i < (count($result[$i])/6); $i++){
+            echo "<tr>\n".
+                 "    <td>".$result[$i]['prodID']."</td>\n".
+                 "    <td>".$result[$i]['name']."</td>\n".
+                 "    <td>".$result[$i]['description']."</td>\n".
+                 "    <td>".$result[$i]['price']."</td>\n".
+                 "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                 "</tr>";
+        }
+     } else {
+		  for($i = 0; $i < (count($result)/$prodCol); $i++){
+            echo "<tr>\n".
+                 "    <td>".$result['prodID']."</td>\n".
+                 "    <td>".$result['name']."</td>\n".
+                 "    <td>".$result['description']."</td>\n".
+                 "    <td>".$result['price']."</td>\n".
+                 "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                 "</tr>";
+        }
+     }
+       	?>
+        </tbody>
+        </table>
+<?php   } else { ?>
+        <div style="margin-top: 250px; margin-left: 40px; margin-right: 40px;">
+            <h3>No results returned</h3>
+        </div>
+<?php   }
+    } else {
         echo "    <form method=\"POST\" action=\"search.php\">\n".
              "        <table>\n".
              "            <tr>\n".
@@ -63,3 +72,4 @@ if($result[1]['name'] != null){
     }
     include("includes/footer.php");
 ?>
+

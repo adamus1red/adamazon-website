@@ -1,283 +1,562 @@
-/* use the fancy fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
-
-/* HTML tag's should go here */
-html {
-	font-family:'Raleway', Helvetica, sans-serif;
+/* line 25, ../sass/main.scss */
+#heading {
+  width: device-width;
+  height: 200px;
+  min-height: 100px;
 }
 
-body {
+
+/* line 3, ../sass/components/_navigation.scss */
+#header-nav ul {
+  padding: 0;
+  height: 100px;
+  list-style: none;
+  position: center;
+}
+/* line 7, ../sass/components/_navigation.scss */
+#header-nav ul :after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* line 11, ../sass/components/_navigation.scss */
+#header-nav ul li {
+  float: left;
+  padding: 5px;
+}
+/* line 14, ../sass/components/_navigation.scss */
+#header-nav ul li li a {
+  display: block;
+  color: #757575;
+  text-decoration: none;
+}
+
+/* line 25, ../sass/components/_navigation.scss */
+#menu-nav ul ul {
+  display: none;
+}
+
+/* line 29, ../sass/components/_navigation.scss */
+#menu-nav ul li:hover > ul {
+  display: block;
+}
+
+/* line 33, ../sass/components/_navigation.scss */
+#menu-nav {
+  border-bottom: 5px solid #000000;
+  width: auto;
+  min-height: 50px;
+}
+
+/* line 33, ../sass/components/_navigation.scss */
+#menu-nav ul {
+  list-style: none;
   margin: 0;
-  background: url(../images/background.png);
-}
-form {
-    display: inline-block;
-    margin: 1em;
-}
-
-
-/* Grid layout */
-
-.headleft, .headcenter, .headright{
-    float:left;
-    width:32%;
-    border:1px solid #CEDCEA; 
-    padding:5px;
-
-}
-.wrap  {
-    margin-bottom: 15px;
-    padding: 10px;
-    color: #0A416B;
-    clear:both;
-}
-/* Classes should go here */
-.heading {
-	position: fixed;
-  	right: 0;
-  	left: 0;
-  	max-height: 340px;
-}
-.heading-content {
-    width: 100%;
-    position: fixed;
-    display: inline-block;
-    top: 0px;
-    padding-top: 10px;
-    height: 100px;
-  	/*background: #DFDFDF;*/
-}
-.fancy-header {
-    font-family: 'Crimson Text', serif;
-    font-style: italic;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
 }
 
-.header-grad {
-  background: -webkit-linear-gradient(rgba(129,129,129,1), rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(129,129,129,1), rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(129,129,129,1), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(129,129,129,1), rgba(0,0,0,0)); /* Standard syntax */
-}
-.content {
-    width:960px;
-    background: #F0F0F0;
-    border: 1px solid #CCC;
-    margin: 100px auto;
-    border-radius: 4px;
-}
-.login-box {
-    height: 24px;
+/* line 43, ../sass/components/_navigation.scss */
+#menu-nav:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
-
-.center-block {
-  	display: block;
-  	margin-right: auto;
-	margin-left: auto;
-	margin-top: 150px;
-}
-.search {
-    padding-left: 20px;
-    display: inline;
-}
-.search-box {
-    width: 75%;
-    height: 20px;
-}
-.login {
-    right: 0;
-    left: auto;
-    position: absolute;
-    display: inline;
+/* line 48, ../sass/components/_navigation.scss */
+#menu-nav ul li {
+  float: left;
 }
 
-.sidebar {
-    width: 20%;
-    vertical-align: top;
-    padding-top: 20px;
+/* line 51, ../sass/components/_navigation.scss */
+#menu-nav ul li:hover {
+  background: #FFFFFF;
+  border-top: 2px solid #000000;
 }
-.sidebar-content {
-    list-style-type: none;
-    line-height: 23px;
+
+/* line 57, ../sass/components/_navigation.scss */
+#menu-nav ul li:hover a {
+  color: #000000;
 }
-.pull-right {
-    float: right !important;
+
+/* line 61, ../sass/components/_navigation.scss */
+#menu-nav ul li a {
+  display: block;
+  padding: 25px 40px;
+  color: #757575;
+  text-decoration: none;
 }
-.pull-left {
-    float: left !important;
+
+/* line 66, ../sass/components/_navigation.scss */
+#menu-nav ul ul {
+  background: #5f6975;
+  border-radius: 0px;
+  padding: 0;
+  position: absolute;
+  top: 100%;
 }
-.hide {
-    display: none !important;
+
+/* line 70, ../sass/components/_navigation.scss */
+#menu-nav ul ul li {
+  float: none;
+  border-top: 1px solid #6b727c;
+  border-bottom: 1px solid #575f6a;
+  position: center;
 }
-.show {
-    display: block !important;
+
+/* line 76, ../sass/components/_navigation.scss */
+#menu-nav ul ul li a {
+  padding: 15px 40px;
+  color: #ffffff;
 }
-.invisible {
-    visibility: hidden;
+
+/* line 80, ../sass/components/_navigation.scss */
+#menu-nav ul ul li a:hover {
+  background: #4b545f;
 }
+
+/* line 84, ../sass/components/_navigation.scss */
+#ßmenu-nav ul ul ul {
+  position: center;
+  /*left: 100%; top:0;*/
+}
+
+/* line 1, ../sass/components/_buttons.scss */
 .button {
-  	display: inline-block;
-  	padding: 6px 12px;
-  	margin-bottom: 0;
-  	line-height: 1.42857143;
-  	text-align: center;
-  	white-space: nowrap;
-  	vertical-align: middle;
-	background-image: none;
-  	border: 1px solid transparent;
- 	border-radius: 4px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 
+/* line 14, ../sass/components/_buttons.scss */
 .button-default {
   color: #333;
-  background-color: #fff;
+  background-color: #00BFFF;
   border-color: #ccc;
 }
 
+/* line 20, ../sass/components/_buttons.scss */
 .button-default:hover,
 .button-default:focus,
 .button-default.focus,
 .button-default:active,
-.button-default.active,{
+.button-default.active {
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 
+/* line 30, ../sass/components/_buttons.scss */
 .button-main {
-  color: #fff;
+  color: #00BFFF;
   background-color: #428bca;
   border-color: #357ebd;
 }
+
+/* line 35, ../sass/components/_buttons.scss */
 .button-main:hover,
 .button-main:focus,
 .button-main.focus,
 .button-main:active,
-.button-main.active,{
-  color: #fff;
+.button-main.active {
+  color: #00BFFF;
   background-color: #3071a9;
   border-color: #285e8e;
 }
 
-.prod-display {
-	background-color: #fffbcc;
-	border: outset #2A7E6B 10px;
-	padding: 20px;
-	margin-bottom: 15px;
-    padding: 25px;
-}
-.prod-image {
-    width: 66%;
-}
-.prod-header {
-    width: 66%;
-    height: 30px;
-    vertical-align: top;
-}
-.prod-content {
-    width: 66%;
-    vertical-align: top;
+/* use the fancy fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
+
+/* HTML tag's should go here */
+/* line 12, ../sass/main.scss */
+html {
+  font-family: 'Raleway', Helvetica, sans-serif;
 }
 
+/* line 15, ../sass/main.scss */
+body {
+  margin: 0;
+  background: #EEEEEE;
+}
+
+/* line 19, ../sass/main.scss */
+form {
+  display: inline-block;
+  margin: 1em;
+}
+
+/* Classes should go here */
+
+
+/* line 40, ../sass/main.scss */
+.fancy-header {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  /* line 46, ../sass/main.scss */
+  .content {
+    width: 740px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    margin: 100px auto;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 500px) {
+  /* line 55, ../sass/main.scss */
+  .content {
+    width: 460px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    margin: 100px auto;
+    border-radius: 4px;
+  }
+}
+/* line 63, ../sass/main.scss */
+.content {
+  width: 80%;
+  background: #F0F0F0;
+  border: 1px solid #CCC;
+  margin: 100px auto;
+  border-radius: 4px;
+}
+
+/* line 70, ../sass/main.scss */
+.login-box {
+  height: 24px;
+}
+
+/* line 77, ../sass/main.scss */
+.navbar-right .dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+
+/* line 82, ../sass/main.scss */
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 250px;
+}
+
+/* line 88, ../sass/main.scss */
+.search {
+  display: inline;
+}
+
+/* line 92, ../sass/main.scss */
+.search-box {
+  min-width: 100px;
+  height: 20px;
+}
+
+/* line 96, ../sass/main.scss */
+.login {
+  right: 0;
+  left: auto;
+  position: absolute;
+  display: inline;
+}
+
+/* line 103, ../sass/main.scss */
+.sidebar {
+  width: 20%;
+  vertical-align: top;
+  padding-top: 20px;
+}
+
+/* line 108, ../sass/main.scss */
+.sidebar-content {
+  list-style-type: none;
+  line-height: 23px;
+}
+
+/* line 112, ../sass/main.scss */
+.pull-right {
+  float: right !important;
+}
+
+/* line 115, ../sass/main.scss */
+.pull-left {
+  float: left !important;
+}
+
+/* line 118, ../sass/main.scss */
+.hide {
+  display: none !important;
+}
+
+/* line 121, ../sass/main.scss */
+.show {
+  display: block !important;
+}
+
+/* line 124, ../sass/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 129, ../sass/main.scss */
+.prod-display {
+  background-color: #fffbcc;
+  padding: 20px;
+  margin-bottom: 15px;
+  padding: 25px;
+  height: 500px;
+}
+
+/* line 136, ../sass/main.scss */
+.prod-image {
+  width: 33%;
+}
+
+/* line 139, ../sass/main.scss */
+.prod-header {
+  width: 66%;
+  height: 30px;
+  vertical-align: top;
+}
+
+/* line 145, ../sass/main.scss */
+.prod-content {
+  width: 66%;
+  vertical-align: top;
+}
+
+/* line 149, ../sass/main.scss */
 .footer {
-    width: 100%;
-    position: fixed;
-    display: inline-block;
-    bottom: 0px;
-    height: 100px;
+  width: 100%;
+  position: fixed;
+  display: inline-block;
+  bottom: 0px;
+  height: 50px;
+  background: #00BFFF;
 }
+
+/* line 157, ../sass/main.scss */
 .footer-content {
-    margin-top: 40px;
+  margin-top: 40px;
 }
-.footer-grad{
-  background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(129,129,129,1)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(0,0,0,0), rgba(129,129,129,1)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(0,0,0,0), rgba(129,129,129,1)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(0,0,0,0), rgba(129,129,129,1)); /* Standard syntax */
+
+/* line 160, ../sass/main.scss */
+.footer-grad {
+  background: -webkit-linear-gradient(transparent, #818181);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(transparent, #818181);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(transparent, #818181);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(transparent, #818181);
+  /* Standard syntax */
 }
 
 /* ID's should go here */
+/* line 168, ../sass/main.scss */
 #search {
-    background: url(../images/icons/glyphicons_027_search.png) no-repeat center;
-    height: 24px;
-    text-indent: -9999px;
-    width: 24px;
+  background: url(../images/icons/glyphicons_027_search.png) no-repeat center;
+  height: 24px;
+  text-indent: -9999px;
+  width: 24px;
 }
+
+/* line 174, ../sass/main.scss */
 #login {
-    background: url(../images/icons/glyphicons_151_new_window.png) no-repeat center;
-    height: 24px;
-    text-indent: -9999px;
-    width: 24px;
+  background: url(../images/icons/glyphicons_151_new_window.png) no-repeat center;
+  height: 24px;
+  text-indent: -9999px;
+  width: 24px;
 }
+
+/* line 180, ../sass/main.scss */
 #logo {
-    background: url(../images/logo.png) no-repeat center;
-    height: 100px;
-    text-indent: -9999px;
-    width: 389px;
-    margin-top: -20px;
+  background: url(../images/logo.png) no-repeat center;
+  float: left;
+  height: 100px;
+  text-indent: -9999px;
+  width: 389px;
+  margin-top: -20px;
 }
+
+/* line 188, ../sass/main.scss */
 #basket {
-    background: url(../images/icons/glyphicons_209_cart_in.png) no-repeat center;
-    height: 24px;
-    text-indent: -9999px;
-    width: 24px;
+  background: url(../images/icons/glyphicons_209_cart_in.png) no-repeat center;
+  height: 24px;
+  text-indent: -9999px;
+  width: 24px;
 }
+
+/* line 213, ../sass/main.scss */
+#mainbox {
+  width: device-width;
+  padding: 5px;
+  border: 5px;
+  margin: 25px;
+}
+
+/* line 220, ../sass/main.scss */
+.infobox {
+  width: device-width;
+  margin: 10px;
+  background: #efeff;
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+  background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+}
+
+/* line 249, ../sass/main.scss */
+label {
+  width: 200px;
+  border-radius: 3px;
+  border: 1px solid #D1D3D4;
+}
+
+/* hide input */
+/* line 256, ../sass/main.scss */
+input.radio:empty {
+  margin-left: -999px;
+}
+
+/* style label */
+/* line 261, ../sass/main.scss */
+input.radio:empty ~ label {
+  position: relative;
+  float: left;
+  line-height: 2.5em;
+  text-indent: 3.25em;
+  margin-top: 2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 274, ../sass/main.scss */
+input.radio:empty ~ label:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 2.5em;
+  background: #D1D3D4;
+  border-radius: 3px 0 0 3px;
+}
+
+/* toggle hover */
+/* line 287, ../sass/main.scss */
+input.radio:hover:not(:checked) ~ label:before {
+  content: '\2714';
+  text-indent: .9em;
+  color: #C2C2C2;
+}
+
+/* line 293, ../sass/main.scss */
+input.radio:hover:not(:checked) ~ label {
+  color: #888;
+}
+
+/* toggle on */
+/* line 298, ../sass/main.scss */
+input.radio:checked ~ label:before {
+  content: '\2714';
+  text-indent: .9em;
+  color: #9CE2AE;
+  background-color: #4DCB6D;
+}
+
+/* line 305, ../sass/main.scss */
+input.radio:checked ~ label {
+  color: #777;
+}
+
+/* radio focus */
+/* line 310, ../sass/main.scss */
+input.radio:focus ~ label:before {
+  box-shadow: 0 0 0 3px #999;
+}
+
+
+
+
+
+
+
+
+
 
 /* Dropdown menu stuff */
 #dropdown{
-	margin: 0;
-	padding: 0;
-	z-index: 30
+  margin: 0;
+  padding: 0;
+  z-index: 30
 }
 
 #dropdown li{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	float: left;
-	font: bold 11px arial
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  font: bold 11px arial
 }
 
 #dropdown li a{
-	display: block;
-	margin: 0 1px 0 0;
-	padding: 4px 10px;
-	width: 60px;
-	/*background: #5970B2;*/
-	/*color: #FFF;*/
-	text-align: center;
-	text-decoration: none
+  display: block;
+  margin: 0 1px 0 0;
+  padding: 4px 10px;
+  width: 60px;
+  /*background: #5970B2;*/
+  /*color: #FFF;*/
+  text-align: center;
+  text-decoration: none
 }
 
 #dropdown li a:hover{
-	/*background: #49A3FF*/
+  /*background: #49A3FF*/
 }
 
 #dropdown div{
-	position: absolute;
-	visibility: hidden;
-	margin: 0;
-	padding: 0;
-	background: #EAEBD8;
-	border: 1px solid #5970B2
+  position: absolute;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  background: #EAEBD8;
+  border: 1px solid #5970B2
 }
 
-#dropdown div a {	
-	position: relative;
-	display: block;
-	margin: 0;
-	padding: 5px 10px;
-	width: auto;
-	white-space: nowrap;
-	text-align: left;
-	text-decoration: none;
-	background: #EAEBD8;
-	color: #2875DE;
-	font: 11px arial
+#dropdown div a { 
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 5px 10px;
+  width: auto;
+  white-space: nowrap;
+  text-align: left;
+  text-decoration: none;
+  background: #EAEBD8;
+  color: #2875DE;
+  font: 11px arial
 }
 
 #dropdown div a:hover {
-	background: #49A3FF;
-	color: #FFF
+  background: #49A3FF;
+  color: #FFF
 }

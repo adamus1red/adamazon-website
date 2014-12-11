@@ -4,6 +4,11 @@
    $site_page_title = "Home";
    include("includes/header.php");
     include("includes/heading.php");
+?>
+
+<div style="margin-top: 40px; margin-left: 40px; margin-right: 40px;">
+
+<?php
    $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
    $sql = "SELECT * FROM `items` WHERE `active` IS TRUE ORDER BY `items`.`prodID` DESC LIMIT 10";
    $result = $oMySQL->executeSQL($sql);
@@ -28,6 +33,13 @@
                  "</article>";
         }
     } 
-    include("includes/footer.php");
+
+?>
+
+</div>
+
+<?php
+
+    //include("includes/footer.php");
 ?>
 
