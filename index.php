@@ -6,7 +6,7 @@
     include("includes/heading.php");
 ?>
 
-<div style="margin-top: 40px; margin-left: 40px; margin-right: 40px;">
+<div style="margin: 40px;">
 
 <?php
    $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
@@ -39,6 +39,6 @@
 
 <?php
 
-    //include("includes/footer.php");
+    include("includes/footer.php");
 ?>
 
