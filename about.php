@@ -14,16 +14,16 @@
                 <tbody>
                     <tr style="padding: 10px;">
                         <td width="25%">
-                            <h1 style="font-family: 'Crimson Text', serif;"><i>Adam McGhie</i></h1>
+                            <h3 style="font-family: 'Crimson Text', serif;"><a href="mailto:rgb12180@uni.strath.ac.uk"><i>Adam McGhie</i></a></h3>
                         </td>
                         <td width="25%">
-                            <h1 style="font-family: 'Crimson Text', serif;"><i>Thomas Sinclair</i></h1>
+                            <h3 style="font-family: 'Crimson Text', serif;"><a href="mailto:mlb12174@uni.strath.ac.uk"><i>Thomas Sinclair</i></a></h3>
                         </td>
                         <td width="25%">
-                            <h1 style="font-family: 'Crimson Text', serif;"><i>Grant Toghill</i></h1>
+                            <h3 style="font-family: 'Crimson Text', serif;"><a href="mailto:wsb12157@uni.strath.ac.uk"><i>Grant Toghill</i></a></h3>
                         </td>
                         <td width="25%">
-                            <h1 style="font-family: 'Crimson Text', serif;"><i>Darren Tang</i></h1>
+                            <h3 style="font-family: 'Crimson Text', serif;"><a href="mailto:pjb12147@uni.strath.ac.uk"><i>Darren Tang</i></a></h3>
                         </td>
                     </tr>
                 </tbody>
