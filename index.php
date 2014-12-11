@@ -15,21 +15,20 @@
    if($result!=1){
         for($i = 0; $i < count($result); $i++){
             echo "<article class=\"prod-display\">\n".
-                 "<table style=\"width:100%\">\n".
-                 "    <tbody>\n".
-                 "        <tr>\n".
-                 "            <td rowspan=\"2\">\n".
-                 "                <a href=\"". $config['base_url'] ."/product?pID=". $result[$i]['prodID'] ."\">\n".
-                 "                    <img src=\"". $config['base_url'] . "". $result[$i]['productImage'] ."\" class=\"prod-image\"alt=\"" . $result[$i]['name'] . "\">\n".
-                 "                </a>\n".
-                 "            </td>\n".
-                 "            <td class=\"prod-header\"><h2 class=\"fancy-header\">". $result[$i]['name'] ."</h2></td>\n".
-                 "        </tr>\n".
-                 "        <tr>\n".
-                 "            <td class=\"prod-content\"><p>" . $result[$i]['description'] . "</p></td>\n".
-                 "        </tr>\n".
-                 "    </tbody>\n".
-                 "</table>\n".
+                 "<div class=\"container\">\n".
+                 "    <a href=\"". $config['base_url'] ."/product?pID=". $result[$i]['prodID'] ."\">\n".
+                 "    <img src=\"". $config['base_url'] . "". $result[$i]['productImage'] ."\" class=\"product-image\"alt=\"" . $result[$i]['name'] . "\">\n".
+                 "    </a>\n".
+                 "    <section class=\"product-data\"><h2 class=\"fancy-header\">". $result[$i]['name'] ."</h2></section>\n".
+                 "    <section class=\"product-data\">" . $result[$i]['description'] . "</section>\n".
+                 "    <section class=\"product-data\">\n".
+                 "       <form action=\"\">\n".
+                 "       <input type=\"radio\" name=\"size\" value=\"small\">S\n".
+                 "       <input type=\"radio\" name=\"size\" value=\"medium\">M\n".
+                 "       <input type=\"radio\" name=\"size\" value=\"large\">L\n".
+                 "   </form></section>\n".
+                 "    <section class=\"product-data\"><button class=\"button button-main\">Buy Now</button></section>\n".
+                 "</div>\n".
                  "</article>";
         }
     } 
