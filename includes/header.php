@@ -16,5 +16,7 @@ include_once("commonFunctions.php");
 	<head>
 		<title><?php echo $config['site_name'];?> - <?php echo $site_page_title;?></title>
 		<link rel="stylesheet" href="<?php echo $config['base_url'];?>/css/main.css">
+        <script src="<?php echo $config['base_url'];?>/js/instantclick.min.js" data-no-instant></script>
+        <script data-no-instant>InstantClick.init();</script>
 	</head>
 	<body>
