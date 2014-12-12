@@ -29,6 +29,7 @@ include_once("commonFunctions.php");
                                      "  <div id=\"uDrop\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">".
                                      "      <a href=\"". $config['base_url'] . "/user\">Control Panel</a>".
                                      "      <a href=\"". $config['base_url'] . "/login?logout=1\">Logout</a>".
+                                      "      <a href=\"". $config['base_url'] . "/cart\">Basket</a>".
                                      "      <a href=\"#\">Orders</a>".
                                      "  </div>".
                                      "</li>".
