@@ -38,7 +38,6 @@
             $site_page_title = "User Login";
             include("includes/header.php");
             include("includes/heading.php");
-            echo "<p>1</p>";
             if(isset($_GET['re'])){
                 echo "<h1>Invalid stuff submitted</h1>";
             }
