@@ -28,7 +28,7 @@
             <tbody>";
             $noResults = count($result);
 
-            if($noResults > 1){
+            if($noResults > 1 && (($noResults/8) < 1)){
                 for($i = 0; $i < $noResults; $i++){
                     echo "<tr>\n".
                          "    <td>".$result[$i]['prodID']."</td>\n".
@@ -38,7 +38,7 @@
                          "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
                          "</tr>";
                 }
-            } else if ($noResults = 1) {
+            } else if ($noResults = 8) {
                 echo "<tr>\n".
                      "    <td>".$result['prodID']."</td>\n".
                      "    <td>".$result['name']."</td>\n".
@@ -60,16 +60,6 @@
              "        </table>\n".
              "    </form>\n";
         }
-    } else {
-    	echo "<h3>No Search term entered</h3>";
-            echo "    <form method=\"POST\" action=\"search.php\">\n".
-             "        <table>\n".
-             "            <tr>\n".
-             "                <td><input type=\"text\" name=\"searchTerm\" size=\"20\"></td>\n".
-             "                <td><input type=\"submit\" value=\"Search\"></td>\n".
-             "            </tr>\n".
-             "        </table>\n".
-             "    </form>\n";
     }
     include("includes/footer.php");
 ?>
