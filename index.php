@@ -22,12 +22,13 @@
                  "    <section class=\"product-data\"><h2 class=\"fancy-header\">". $result[$i]['name'] ."</h2></section>\n".
                  "    <section class=\"product-data\">" . $result[$i]['description'] . "</section>\n".
                  "    <section class=\"product-data\">\n".
-                 "       <form action=\"\">\n".
+                 "       <form action=\"addtocart.php\">\n".
+                 "       <input name=\"pid\" type=\"hidden\" value=\"".$result[$i]['prodID']."\" />\n".
+                 "       <input name=\"qty\" type=\"hidden\" value=\"1\" />\n".
                  "       <input type=\"radio\" name=\"size\" value=\"small\">S\n".
                  "       <input type=\"radio\" name=\"size\" value=\"medium\">M\n".
                  "       <input type=\"radio\" name=\"size\" value=\"large\">L\n".
-                 "   </form></section>\n".
-                 "    <section class=\"product-data\"><button class=\"button button-main\">Buy Now</button></section>\n".
+                 "       <input type=\"submit\" name=\"submit\" value=\"Add to Cart\" class=\"button button-main\"></section></form>\n".
                  "</div>\n".
                  "</article>";
         }
