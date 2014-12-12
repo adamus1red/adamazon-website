@@ -11,7 +11,7 @@ include_once("commonFunctions.php");
                     <input type="text" class="search-box" name="searchTerm" placeholder="Search" style="width=400px;">
                     <button class="button" id="search" type="submit">Search</button>
                 </form></li>
-                <li class="search">
+                <li class="pull-right">
                     <?php if ($uID == '') { ?>
                     <form role="form" method="POST" action="login" style="margin-right: auto; margin-left: auto; display: inline-block;">
                         <input name="username" class="login-box" placeholder="Email address" type="text" id="username">
