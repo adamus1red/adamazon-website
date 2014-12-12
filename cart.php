@@ -69,7 +69,7 @@ if(count($_SESSION['cart_items'])>0){
                 $total_price+=$result[$i]['price'];
                 $i++;
             }
-        } else {
+        } else if ($countID = 1) {
             echo "<tr>\n".
                  "    <td>". $result['name'] ."</td>\n".
                  "    <td>&#36;". $result['price'] ."</td>\n".
@@ -81,6 +81,8 @@ if(count($_SESSION['cart_items'])>0){
                  "</tr>";
             $total_price+=$result['price'];
             $i++;
+        } else {
+            echo "<h3> basket empty</h3>";
         }
  
         echo "<tr>";
