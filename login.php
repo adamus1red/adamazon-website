@@ -17,7 +17,6 @@
         header('Location: index.php?re=0');
     } else if(isset($_GET['reg'])){
         if((!empty($_POST['password'])) || (!empty($_POST['username'])) || (!empty($_POST['password2']))) {
-            echo "<p>1</p>";
             if($_POST['password'] == $_POST['password2']){
                 $rawNewUser = $_POST['username'];
                 $rawNewPass = $_POST['password'];
