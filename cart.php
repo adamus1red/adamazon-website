@@ -53,7 +53,7 @@ if(count($_SESSION['cart_items'])>0){
         $total_price=0;
         //print_r($result);
         //echo "\n" . $countID . "\n" . count($result);
-        if($countID >= 2){
+        if($countID > 1){
             $i = 0;
             while($i < count($result)){
                 echo "<tr>\n".
@@ -70,7 +70,7 @@ if(count($_SESSION['cart_items'])>0){
                 $i++;
             }
         } else {
-            echo "<tr>\n";
+            echo "<tr>\n".
                  "    <td>". $result['name'] ."</td>\n".
                  "    <td>&#36;". $result['price'] ."</td>\n".
                  "    <td>\n".
