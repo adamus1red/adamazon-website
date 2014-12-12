@@ -4,7 +4,7 @@ include_once("includes/mysql.php");
 
 session_start();
  
-$page_title="Cart";
+$site_page_title ="Cart";
 include("includes/header.php");
 include("includes/heading.php");
  
