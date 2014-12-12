@@ -19,7 +19,7 @@
                  "    <a href=\"". $config['base_url'] ."/product?pID=". $result[$i]['prodID'] ."\">\n".
                  "    <img src=\"". $config['base_url'] . "". $result[$i]['productImage'] ."\" class=\"product-image\"alt=\"" . $result[$i]['name'] . "\">\n".
                  "    </a>\n".
-                 "    <section class=\"product-data\"><h2 class=\"fancy-header\">". $result[$i]['name'] ."</h2></section>\n".
+                 "    <section class=\"product-data\"><h2 class=\"fancy-text\">". $result[$i]['name'] ."</h2></section>\n".
                  "    <section class=\"product-data\">" . $result[$i]['description'] . "</section>\n".
                  "    <section class=\"product-data\">\n".
                  "       <form action=\"addtocart.php\">\n".
