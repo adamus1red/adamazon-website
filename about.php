@@ -14,7 +14,7 @@
                 <tbody>
                     <tr style="padding: 10px;">
                         <td width="25%">
-                            <h3 style="font-family: 'Crimson Text', serif;"><a href="mailto:rgb12180@uni.strath.ac.uk"><i>Adam McGhie</i></a></h3>
+                            <h3 style="font-family: 'Crimson Text', serif;"><a href="mailto:rjb12180@uni.strath.ac.uk"><i>Adam McGhie</i></a></h3>
                         </td>
                         <td width="25%">
                             <h3 style="font-family: 'Crimson Text', serif;"><a href="mailto:mlb12174@uni.strath.ac.uk"><i>Thomas Sinclair</i></a></h3>
