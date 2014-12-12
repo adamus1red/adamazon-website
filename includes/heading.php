@@ -18,7 +18,7 @@ include_once("commonFunctions.php");
                         <input name="password" class="login-box" placeholder="Password" type="password" id="password">
                         <input class="button" id="login" type="submit" name="Submit" value="Login">
                     </form><br />
-                    <a href="<?php echo "". $config['base_url'] . "/login?reg=1";?>">Register Here</a>
+                    <a class="button button-main" syle="color: black;" href="<?php echo "". $config['base_url'] . "/login?reg=1";?>">Register Here</a>
                     <?php 
                         } else {
                             $sql = "SELECT * FROM `users` WHERE `sessionID` = '" . $uID . "' AND `active` IS TRUE";
