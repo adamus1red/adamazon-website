@@ -37,7 +37,7 @@ include_once("commonFunctions.php");
                                  "</ul>".
                                  "<div style=\"clear:both\"></div>";
                             } else {
-                                header('Location: login?re=0');
+                                header('Location: login?logout=0');
                             }
                         }
                     ?>
