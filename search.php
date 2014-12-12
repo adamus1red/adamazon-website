@@ -1,23 +1,21 @@
 <?php
-	include_once("includes/config.php");
-	include_once("includes/mysql.php");
-   $site_page_title = "Search";
-   include("includes/header.php");
-	include("includes/heading.php");
-    
+    include_once("includes/config.php");
+    include_once("includes/mysql.php");
+    $site_page_title = "Search";
+    include("includes/header.php");
+    include("includes/heading.php");
+
     if(!empty($_POST['searchTerm'])) {
         $search = mysql_real_escape_string($_POST['searchTerm']);
         $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
-        
+
         // Build an SQL query to search the blog_entries table
         $sql = "SELECT * FROM `items` WHERE (`description` LIKE '%{$search}%' OR `name` LIKE '%{$search}%') AND `active` IS TRUE";
         // Execute the query
         $result = $oMySQL->executeSQL($sql);
         // Loop over results
         if($result!=1){
-        ?>
-        <div style="margin-top: 250px; margin-left: 40px; margin-right: 40px;">
-        <table style="width: 100%;">
+        echo "<table style=\"width: 100%;\">
             <thead>
                 <tr>
                     <td>Item Number</td>
@@ -27,41 +25,44 @@
                     <td></td>
                 </tr>
             </thead>
-            <tbody>
-        </div>
-                
-<?php
-		if(!empty($result[1]['name'])){
-        for($i = 0; $i < (count($result[$i])/6); $i++){
-            echo "<tr>\n".
-                 "    <td>".$result[$i]['prodID']."</td>\n".
-                 "    <td>".$result[$i]['name']."</td>\n".
-                 "    <td>".$result[$i]['description']."</td>\n".
-                 "    <td>".$result[$i]['price']."</td>\n".
-                 "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
-                 "</tr>";
+            <tbody>";
+            $noResults = count($result);
+
+            if($noResults > 1){
+                for($i = 0; $i < $noResults; $i++){
+                    echo "<tr>\n".
+                         "    <td>".$result[$i]['prodID']."</td>\n".
+                         "    <td>".$result[$i]['name']."</td>\n".
+                         "    <td>".$result[$i]['description']."</td>\n".
+                         "    <td>".$result[$i]['price']."</td>\n".
+                         "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                         "</tr>";
+                }
+            } else if ($noResults = 1) {
+                echo "<tr>\n".
+                     "    <td>".$result['prodID']."</td>\n".
+                     "    <td>".$result['name']."</td>\n".
+                     "    <td>".$result['description']."</td>\n".
+                     "    <td>".$result['price']."</td>\n".
+                     "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                     "</tr>";
+            } else {
+                echo "<h3>No results returned</h3>";
+            }
+        } else {
+            echo "<h3>No Results Found</h3>";
+            echo "    <form method=\"POST\" action=\"search.php\">\n".
+             "        <table>\n".
+             "            <tr>\n".
+             "                <td><input type=\"text\" name=\"searchTerm\" size=\"20\"></td>\n".
+             "                <td><input type=\"submit\" value=\"Search\"></td>\n".
+             "            </tr>\n".
+             "        </table>\n".
+             "    </form>\n";
         }
-     } else {
-		  for($i = 0; $i < (count($result)/$prodCol); $i++){
-            echo "<tr>\n".
-                 "    <td>".$result['prodID']."</td>\n".
-                 "    <td>".$result['name']."</td>\n".
-                 "    <td>".$result['description']."</td>\n".
-                 "    <td>".$result['price']."</td>\n".
-                 "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
-                 "</tr>";
-        }
-     }
-       	?>
-        </tbody>
-        </table>
-<?php   } else { ?>
-        <div style="margin-top: 250px; margin-left: 40px; margin-right: 40px;">
-            <h3>No results returned</h3>
-        </div>
-<?php   }
     } else {
-        echo "    <form method=\"POST\" action=\"search.php\">\n".
+    	echo "<h3>No Search term entered</h3>";
+            echo "    <form method=\"POST\" action=\"search.php\">\n".
              "        <table>\n".
              "            <tr>\n".
              "                <td><input type=\"text\" name=\"searchTerm\" size=\"20\"></td>\n".
@@ -72,4 +73,3 @@
     }
     include("includes/footer.php");
 ?>
-
