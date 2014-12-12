@@ -315,12 +315,13 @@ form {
   margin-bottom: 15px;
   border: 3px solid #000000;
   padding: 25px;
-  height: 500px;
+  height: 250px;
 }
 
 /* line 136, ../sass/main.scss */
 .prod-image {
   width: 33%;
+  max-height: 150px;
 }
 
 /* line 139, ../sass/main.scss */
@@ -568,7 +569,8 @@ input.radio:focus ~ label:before {
 .product-image {
   position: absolute;
   left: 0px;
-  width: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 .product-data {
   /* position is static by default */
