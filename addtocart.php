@@ -67,7 +67,7 @@ if(!isset($_SESSION['cart_items'])){
 // check if the item is in the array, if it is, do not add
 if(array_key_exists($id, $_SESSION['cart_items'])){
     // redirect to product list and tell the user it was added to cart
-    header('Location: about.php');
+    header('Location: cart.php');
 }
  
 // else, add the item to the array
