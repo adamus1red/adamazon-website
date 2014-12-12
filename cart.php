@@ -26,9 +26,11 @@ else if($action=='quantity_updated'){
 if(count($_SESSION['cart_items'])>0){
  
     // get the product ids
+    $countID = 0;
     $ids = "";
     foreach($_SESSION['cart_items'] as $id=>$value){
         $ids = $ids . $id . ",";
+        $countID = $countID + 1;
     }
  
     // remove the last comma
@@ -49,20 +51,35 @@ if(count($_SESSION['cart_items'])>0){
         $result = $oMySQL->executeSQL($sql);
  
         $total_price=0;
-        $i = 0;
-        while ($i < count($result)){
+        //print_r($result);
+        //echo "\n" . $countID . "\n" . count($result);
+        if($countID >= 2){
+            $i = 0;
+            while($i < count($result)){
+                echo "<tr>\n".
+                     "    <td>". $result[$i]['name'] ."</td>\n".
+                     "    <td>&#36;". $result[$i]['price'] ."</td>\n".
+                     "    <td>\n".
+                     "        <a href='remove_from_cart.php?id=". $result[$i]['prodID'] ."&name=". $result[$i]['name'] ."' class='btn btn-danger'>\n".
+                     "            <span class='glyphicon glyphicon-remove'></span> Remove from cart\n".
+                     "        </a>\n".
+                     "    </td>\n".
+                     "</tr>";
  
-            echo "<tr>";
-                echo "<td>". $result[$i]['name'] ."</td>";
-                echo "<td>&#36;". $result[$i]['price'] ."</td>";
-                echo "<td>";
-                    echo "<a href='remove_from_cart.php?id=". $result[$i]['prodID'] ."&name=". $result[$i]['name'] ."' class='btn btn-danger'>";
-                        echo "<span class='glyphicon glyphicon-remove'></span> Remove from cart";
-                    echo "</a>";
-                echo "</td>";
-            echo "</tr>";
- 
-            $total_price+=$result[$i]['price'];
+                $total_price+=$result[$i]['price'];
+                $i++;
+            }
+        } else {
+            echo "<tr>\n";
+                 "    <td>". $result['name'] ."</td>\n".
+                 "    <td>&#36;". $result['price'] ."</td>\n".
+                 "    <td>\n".
+                 "        <a href='remove_from_cart.php?id=". $result['prodID'] ."&name=". $result['name'] ."' class='btn btn-danger'>\n".
+                 "            <span class='glyphicon glyphicon-remove'></span> Remove from cart\n".
+                 "        </a>\n".
+                 "    </td>\n".
+                 "</tr>";
+            $total_price+=$result['price'];
             $i++;
         }
  
