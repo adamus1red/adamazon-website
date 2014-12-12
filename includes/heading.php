@@ -25,7 +25,7 @@ include_once("commonFunctions.php");
                             $result = $oMySQL->executeSQL($sql);
                             if($result['sessionID'] == $uID){
                                 echo "<ul id=\"dropdown\">".
-                                     "<li><h1><a href=\"#\" onmouseover=\"mopen('uDrop')\" onmouseout=\"mclosetime()\">" . $result['username'] ."</a></h1>".
+                                     "<li  style=\"margin-right: 25px;\"><h1><a href=\"#\" onmouseover=\"mopen('uDrop')\" onmouseout=\"mclosetime()\">" . $result['username'] ."</a></h1>".
                                      "  <div id=\"uDrop\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">".
                                      "      <a href=\"". $config['base_url'] . "/user\">Control Panel</a>".
                                      "      <a href=\"". $config['base_url'] . "/login?logout=1\">Logout</a>".
