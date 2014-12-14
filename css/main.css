@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes&subset=latin,latin-ext);
+
 /* line 25, ../sass/main.scss */
 #heading {
   width: device-width;
@@ -576,4 +578,7 @@ input.radio:focus ~ label:before {
   /* position is static by default */
   margin-left: 200px;
   padding-left: 100px;
+}
+.fancy-text {
+    font-family: 'Great Vibes', cursive;
 }
