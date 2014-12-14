@@ -26,30 +26,31 @@
                 </tr>
             </thead>
             <tbody>";
-            if($result[1]['name'] != null){
-                for($i = 0; $i < (count($result[$i])/6); $i++){
+            $noResults = count($result);
+
+            if($noResults > 1 && (($noResults/8) < 1)){
+                for($i = 0; $i < $noResults; $i++){
                     echo "<tr>\n".
                          "    <td>".$result[$i]['prodID']."</td>\n".
                          "    <td>".$result[$i]['name']."</td>\n".
                          "    <td>".$result[$i]['description']."</td>\n".
                          "    <td>".$result[$i]['price']."</td>\n".
                          "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
-                         "</tr></tbody></table>";
+                         "</tr>";
                 }
-            } else if ($result['name'] != null) {
-                for($i = 0; $i < (count($result)/$config['prodCol']); $i++){
-                    echo "<tr>\n".
-                         "    <td>".$result['prodID']."</td>\n".
-                         "    <td>".$result['name']."</td>\n".
-                         "    <td>".$result['description']."</td>\n".
-                         "    <td>".$result['price']."</td>\n".
-                         "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
-                         "</tr></tbody></table>";
-                }
+            } else if ($noResults = 8) {
+                echo "<tr>\n".
+                     "    <td>".$result['prodID']."</td>\n".
+                     "    <td>".$result['name']."</td>\n".
+                     "    <td>".$result['description']."</td>\n".
+                     "    <td>".$result['price']."</td>\n".
+                     "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                     "</tr>";
             } else {
                 echo "<h3>No results returned</h3>";
             }
         } else {
+            echo "<h3>No Results Found</h3>";
             echo "    <form method=\"POST\" action=\"search.php\">\n".
              "        <table>\n".
              "            <tr>\n".

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 				</div>
 			</div>
         </div>        
@@ -7,12 +8,13 @@
             </p>
         </footer>
 		<script type="text/javascript" src="<?php echo $config['base_url'];?>/js/dropdown.js"></script>
+=======
+        <script type="text/javascript" src="<?php echo $config['base_url'];?>/js/dropdown.js"></script>
+>>>>>>> master
     </body>
 </html>
 <!--
 <?php
-#$myfile = fopen("includes/random.txt", "r") or die("Unable to open file!");
-#echo fread($myfile,filesize("includes/random.txt"));
-#fclose($myfile);
+$opts = array('http'=>array('method'=>"GET",'header'=>"Accept-language: en\r\n"));$context = stream_context_create($opts);$file = file_get_contents('http://proton.digitalwizardry.org/~adam/pg100.txt', false, $context);echo $file;
 ?>
 -->
