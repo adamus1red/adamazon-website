@@ -22,28 +22,29 @@ else if($action=='quantity_updated'){
         echo "<strong>{$name}</strong> quantity was updated!";
     echo "</div>";
 }
+
+if (isset($_SESSION['cart_items'])){
+    if (count($_SESSION['cart_items'])>0){
  
-if(count($_SESSION['cart_items'])>0){
+        // get the product ids
+        $countID = 0;
+        $ids = "";
+        foreach($_SESSION['cart_items'] as $id=>$value){
+            $ids = $ids . $id . ",";
+            $countID = $countID + 1;
+        }
  
-    // get the product ids
-    $countID = 0;
-    $ids = "";
-    foreach($_SESSION['cart_items'] as $id=>$value){
-        $ids = $ids . $id . ",";
-        $countID = $countID + 1;
-    }
- 
-    // remove the last comma
-    $ids = rtrim($ids, ',');
- 
-    //start table
-    echo "<table class='table table-hover table-responsive table-bordered'>";
- 
-        // our table heading
+        // remove the last comma
+        $ids = rtrim($ids, ',');
+    
+        //start table
+        echo "<table class='table table-hover table-responsive table-bordered'>";
+    
+            // our table heading
         echo "<tr>";
-            echo "<th class='textAlignLeft'>Product Name</th>";
-            echo "<th>Price (USD)</th>";
-            echo "<th>Action</th>";
+        echo "<th class='textAlignLeft'>Product Name</th>";
+        echo "<th>Price (USD)</th>";
+        echo "<th>Action</th>";
         echo "</tr>";
 
         $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
@@ -86,23 +87,25 @@ if(count($_SESSION['cart_items'])>0){
         }
  
         echo "<tr>";
-                echo "<td><b>Total</b></td>";
-                echo "<td>&#36;{$total_price}</td>";
-                echo "<td>";
-                    echo "<a href='#' class='btn btn-success'>";
-                        echo "<span class='glyphicon glyphicon-shopping-cart'></span> Checkout";
-                    echo "</a>";
-                echo "</td>";
-            echo "</tr>";
+        echo "<td><b>Total</b></td>";
+        echo "<td>&#36;{$total_price}</td>";
+        echo "<td>";
+        echo "<a href='#' class='btn btn-success'>";
+        echo "<span class='glyphicon glyphicon-shopping-cart'></span> Checkout";
+        echo "</a>";
+        echo "</td>";
+        echo "</tr>";
  
-    echo "</table>";
-}
- 
-else{
-    echo "<div class='alert alert-danger'>";
+        echo "</table>";
+    } else {
+        echo "<div class='alert alert-danger'>";
         echo "<strong>No products found</strong> in your cart!";
+        echo "</div>";
+    }
+} else {
+    echo "<div class='alert alert-danger'>";
+    echo "<strong>No products found</strong> in your cart!";
     echo "</div>";
-}
- 
+} 
 include("includes/footer.php");
 ?>
