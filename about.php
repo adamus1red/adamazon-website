@@ -28,11 +28,21 @@
                     </tr>
                 </tbody>
             </table>
-            <hr>
+            <hr />
             <h1 class="fancy-text"><i>Contact Us</i></h1>
             <p><a href="mailto:<?php echo $config['contact_address'];?>" class="button button-main"><?php echo $config['contact_address'];?></a></p>
-            </div>
-            
+            <hr />
+		<h1>Current Adamazon stock price is: <div id="stock">Loading current stock price ...</div></h1>
+           </div>
+<script type="text/javascript">// <![CDATA[
+    $(document).ready(function() {
+    $.ajaxSetup({ cache: false }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
+    setInterval(function() {
+        $('#stock').load('getStockPrice.php');
+        }, 3000); // the "3000" here refers to the time to refresh the div.  it is in milliseconds.
+    }
+);
+// ]]></script>
 <?php
     include("includes/footer.php");
 ?>

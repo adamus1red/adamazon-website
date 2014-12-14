@@ -17,5 +17,6 @@ include_once("commonFunctions.php");
 		<title><?php echo $config['site_name'];?> - <?php echo $site_page_title;?></title>
 		<link rel="stylesheet" href="<?php echo $config['base_url'];?>/css/main.css">
         <script src="<?php echo $config['base_url']?>/js/fuck-ie.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
