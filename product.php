@@ -25,6 +25,12 @@
                  "        <tr>\n".
                  "            <td class=\"prod-content\"><p>" . $result['description'] . "</p></td>\n".
                  "        </tr>\n".
+                 "       <tr><td class=\"pull-right\"><form action=\"addtocart.php\">\n".
+                 "       <input name=\"qty\" type=\"hidden\" value=\"1\" />\n".
+                 "       <input type=\"radio\" name=\"pid\" value=\"{$result['prodID']}\">S\n".
+                 "       <input type=\"radio\" name=\"pid\" value=\"1{$result['prodID']}\">M\n".
+                 "       <input type=\"radio\" name=\"pid\" value=\"2{$result['prodID']}\">L\n".
+                 "       <input type=\"submit\" name=\"submit\" value=\"Add to Cart\" class=\"button button-main\"></section></form>\n</td></tr>".
                  "    </tbody>\n".
                  "</table>\n".
                  "</article>";

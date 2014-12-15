@@ -35,7 +35,12 @@
                          "    <td>".$result[$i]['name']."</td>\n".
                          "    <td>".$result[$i]['description']."</td>\n".
                          "    <td>".$result[$i]['price']."</td>\n".
-                         "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                         "    <td><form action=\"addtocart.php\">\n".
+                         "       <input name=\"qty\" type=\"hidden\" value=\"1\" />\n".
+                         "       <input type=\"radio\" name=\"pid\" value=\"{$result[$i]['prodID']}\">S\n".
+                         "       <input type=\"radio\" name=\"pid\" value=\"1{$result[$i]['prodID']}\">M\n".
+                         "       <input type=\"radio\" name=\"pid\" value=\"2{$result[$i]['prodID']}\">L\n".
+                         "       <input type=\"submit\" name=\"submit\" value=\"Add to Cart\"  id=\"basket\"></section></form>\n</td>\n". //TODO Impliment adding stuff to basket
                          "</tr>";
                 }
             } else if ($noResults = 8) {
@@ -44,7 +49,12 @@
                      "    <td>".$result['name']."</td>\n".
                      "    <td>".$result['description']."</td>\n".
                      "    <td>".$result['price']."</td>\n".
-                     "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                     "    <td><form action=\"addtocart.php\">\n".
+                     "       <input name=\"qty\" type=\"hidden\" value=\"1\" />\n".
+                     "       <input type=\"radio\" name=\"pid\" value=\"{$result['prodID']}\">S\n".
+                     "       <input type=\"radio\" name=\"pid\" value=\"1{$result['prodID']}\">M\n".
+                     "       <input type=\"radio\" name=\"pid\" value=\"2{$result['prodID']}\">L\n".
+                     "       <input type=\"submit\" name=\"submit\" value=\"Add to Cart\"  id=\"basket\"></section></form>\n</td>\n". //TODO Impliment adding stuff to basket
                      "</tr>";
             } else {
                 echo "<h3>No results returned</h3>";
