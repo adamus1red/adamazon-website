@@ -10,7 +10,7 @@ include_once("commonFunctions.php");
                 <li class="pull-left"><a href="<?php echo "". $config['base_url'] . "/index";?>"><h1 id="logo">Adamazon</h1></a></li>
                 <!-- Search -->
                 <li class="search"><form method="POST" action="search" style="margin-right: auto; margin-left: auto; display: inline-block;">
-                    <input type="text" class="search-box" name="searchTerm" placeholder="Search" style="width=400px;">
+                    <input type="text" class="search-box" name="searchTerm" placeholder="Search">
                     <button class="button" id="search" type="submit">Search</button>
                 </form></li>
                 <!-- Login -->
