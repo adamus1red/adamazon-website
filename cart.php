@@ -76,18 +76,21 @@ if(count($saved_cart_items)>0){
                  "</tr>";
             $total_price+=$result['price'];
          }
- 
-        echo "<tr>";
-                echo "<td><b>Total</b></td>";
-                echo "<td>&#163;{$total_price}</td>";
-                echo "<td>";
-                    echo "<a href='#' class='btn btn-success'>";
-                        echo "<span class='glyphicon glyphicon-shopping-cart'></span> Checkout";
-                    echo "</a>";
-                echo "</td>";
-            echo "</tr>";
- 
-    echo "</table>";
+
+        echo "</table>";
+
+        echo "<ul style='list-style-type: none'><li class='pull-left' style='line-style: none; text-decoration: none;'><h4>Total Price: " . $total_price . "</h4></li>";
+
+            echo "<li class='pull-left' style='line-style: none; text-decoration: none;'><script async='async' src='https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=tasinclair1@gmail.com'"; 
+                echo    "data-button='buynow'"; 
+                echo    "data-name='Adamazon Sale'";
+                echo    "data-amount='" . $total_price . "'"; 
+                echo    "data-currency='GBP'"; 
+                echo    "data-shipping='0'";
+                echo    "data-callback='https://devweb2014.cis.strath.ac.uk/~mlb12174/massive-octo-dubstep/order.php'";
+                echo    "data-env='sandbox'";
+            echo "></script></li></ul>";
+
 }
  
 else{
