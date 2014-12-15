@@ -15,8 +15,8 @@ include_once("commonFunctions.php");
                 </form></li>
                 <!-- Login -->
                 <li class="pull-right">
-                    <a class="button button-main" syle="color: black;" href="<?php echo "". $config['base_url'] . "/login?reg=1";?>">Register Here</a>
                     <?php if ($uID == '') { ?>
+                    <a class="button button-main" syle="color: black;" href="<?php echo "". $config['base_url'] . "/login?reg=1";?>">Register Here</a>
                     <form role="form" method="POST" action="login" style="margin-right: auto; margin-left: auto; display: inline-block;">
                         <input name="username" class="login-box" placeholder="Email address" type="text" id="username">
                         <input name="password" class="login-box" placeholder="Password" type="password" id="password">
