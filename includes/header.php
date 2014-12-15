@@ -13,9 +13,12 @@ include_once("commonFunctions.php");
     $cart_items=array();
  
 
- 
+ if(isset($_COOKIE[$config['cart_cookie']])){
 	// read the cookie
-	$cookie = $_COOKIE['cart_items_cookie'];
+	$cookie = $_COOKIE[$config['cart_cookie']];
+} else {
+    $cookie = null;
+}
 	$cookie = stripslashes($cookie);
 	$saved_cart_items = json_decode($cookie, true);
  
@@ -29,5 +32,6 @@ include_once("commonFunctions.php");
 	<head>
 		<title><?php echo $config['site_name'];?> - <?php echo $site_page_title;?></title>
 		<link rel="stylesheet" href="<?php echo $config['base_url'];?>/css/main.css">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
