@@ -12,11 +12,9 @@ $id = isset($_GET['pid']) ? $_GET['pid'] : "";
 $cart_items[$id]=$id;
  
 // read the cookie
-if (isset($_COOKIE[$config['cart_cookie']]) {
-    $cookie = $_COOKIE[$config['cart_cookie']];
-    $cookie = stripslashes($cookie);
-    $saved_cart_items = json_decode($cookie, true);
-}
+$cookie = $_COOKIE['cart_items_cookie'];
+$cookie = stripslashes($cookie);
+$saved_cart_items = json_decode($cookie, true);
  
 // if $saved_cart_items is null, prevent null error
 if(!$saved_cart_items){
