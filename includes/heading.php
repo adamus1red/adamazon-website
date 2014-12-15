@@ -6,19 +6,22 @@ include_once("commonFunctions.php");
     <header id="heading">
         <nav id ="header-nav">
             <ul>
-                <li><a href="<?php echo "". $config['base_url'] . "/index";?>"><h1 id="logo">Adamazon</h1></a></li>
+                <!-- Icon -->
+                <li class="pull-left"><a href="<?php echo "". $config['base_url'] . "/index";?>"><h1 id="logo">Adamazon</h1></a></li>
+                <!-- Search -->
                 <li class="search"><form method="POST" action="search" style="margin-right: auto; margin-left: auto; display: inline-block;">
                     <input type="text" class="search-box" name="searchTerm" placeholder="Search" style="width=400px;">
                     <button class="button" id="search" type="submit">Search</button>
                 </form></li>
+                <!-- Login -->
                 <li class="pull-right">
                     <?php if ($uID == '') { ?>
+                    <a class="button button-main" syle="color: black;" href="<?php echo "". $config['base_url'] . "/login?reg=1";?>">Register Here</a>
                     <form role="form" method="POST" action="login" style="margin-right: auto; margin-left: auto; display: inline-block;">
                         <input name="username" class="login-box" placeholder="Email address" type="text" id="username">
                         <input name="password" class="login-box" placeholder="Password" type="password" id="password">
                         <input class="button" id="login" type="submit" name="Submit" value="Login">
-                    </form><br />
-                    <a class="button button-main" syle="color: black;" href="<?php echo "". $config['base_url'] . "/login?reg=1";?>">Register Here</a>
+                    </form>
                     <?php 
                         } else {
                             $sql = "SELECT * FROM `users` WHERE `sessionID` = '" . $uID . "' AND `active` IS TRUE";

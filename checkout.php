@@ -12,7 +12,14 @@
 
 <div style="margin: 40px;">
 
-<table width="100%" border="0">
+  <script src="js/paypal-button.min.js?merchant=tasinclair1@gmail.com"
+    data-button="buynow"
+    data-name="My product"
+    data-amount="1.00"
+    async
+></script>
+
+<!-- <table width="100%" border="0">
   <tr>
     <td colspan="2"><h1>Order Checkout</h1></td>
   </tr>
@@ -59,7 +66,7 @@
   </tr>
    </form>
 
-
+</table> -->
 </div>
 
 <?php
