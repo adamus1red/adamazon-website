@@ -17,6 +17,7 @@ include_once("commonFunctions.php");
 	// read the cookie
 	$cookie = $_COOKIE[$config['cart_cookie']];
 } else {
+    setcookie($config['cart_cookie'], null);
     $cookie = null;
 }
 	$cookie = stripslashes($cookie);
@@ -24,7 +25,7 @@ include_once("commonFunctions.php");
  
     // put item to cookie
     $json = json_encode($saved_cart_items, true);
-    setcookie('cart_items_cookie', $json);
+    
    
 ?>
 <!DOCTYPE html>

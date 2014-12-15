@@ -32,7 +32,7 @@
             <h1 class="fancy-text"><i>Contact Us</i></h1>
             <p><a href="mailto:<?php echo $config['contact_address'];?>" class="button button-main"><?php echo $config['contact_address'];?></a></p>
             <hr />
-		<h1>Current Adamazon stock price is: <div id="stock">Loading current stock price ...</div></h1>
+		<h1>Current Adamazon stock price is: <div id="stock" style="inline-block">Loading current stock price ...</div></h1>
            </div>
 <script type="text/javascript">// <![CDATA[
     $(document).ready(function() {
