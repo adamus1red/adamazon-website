@@ -11,18 +11,7 @@ $name = isset($_GET['name']) ? $_GET['name'] : "";
 $size = isset($_GET['size']) ? $_GET['size'] : "";
  
 // add new item on array
-if($size = "medium"){
-    $id = $id + 10
-    $cart_items[$id]=$id;
-}
-else if($size = "large"){
-    $id = intval ($id) + 20
-    $cart_items[$id]=$id;
-}
-else{
-    $cart_items[$id]=$id;
-}
-
+$cart_items[$id]=$id;
  
 // read the cookie
 $cookie = $_COOKIE['cart_items_cookie'];
