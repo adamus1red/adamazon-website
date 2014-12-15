@@ -38,11 +38,12 @@ if(count($saved_cart_items)>0){
         echo "<tr>";
             echo "<th class='textAlignLeft'>Product Name</th>";
             echo "<th>Price (GBP)</th>";
+            echo "<th>Size</th>";
             echo "<th>Action</th>";
         echo "</tr>";
  
         $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
-        $sql = "SELECT prodID, name, price FROM items WHERE prodID IN ({$ids}) ORDER BY name";
+        $sql = "SELECT prodID, name, price, size FROM items WHERE prodID IN ({$ids}) ORDER BY name";
         $result = $oMySQL->executeSQL($sql);
  
         $total_price=0;
@@ -54,6 +55,7 @@ if(count($saved_cart_items)>0){
                 echo "<tr>\n".
                      "    <td>". $result[$i]['name'] ."</td>\n".
                      "    <td>&#163;". $result[$i]['price'] ."</td>\n".
+                     "    <td>". $result[$i]['size'] ."</td>\n".
                      "    <td>\n".
                      "        <a href='remove_from_cart.php?id=". $result[$i]['prodID'] ."&name=". $result[$i]['name'] ."' class='btn btn-danger'>\n".
                      "            <span class='glyphicon glyphicon-remove'></span> Remove from cart\n".
@@ -68,6 +70,7 @@ if(count($saved_cart_items)>0){
             echo "<tr>\n".
                  "    <td>". $result['name'] ."</td>\n".
                  "    <td>&#163;". $result['price'] ."</td>\n".
+                 "    <td>". $result['size'] ."</td>\n".
                  "    <td>\n".
                  "        <a href='remove_from_cart.php?id=". $result['prodID'] ."&name=". $result['name'] ."' class='btn btn-danger'>\n".
                  "            <span class='glyphicon glyphicon-remove'></span> Remove from cart\n".
@@ -79,7 +82,7 @@ if(count($saved_cart_items)>0){
 
         echo "</table>";
 
-        echo "<ul style='list-style-type: none'><li class='pull-left' style='line-style: none; text-decoration: none;'><h4>Total Price: " . $total_price . "</h4></li>";
+        echo "<ul style='list-style-type: none'><li class='pull-left' style='line-style: none; text-decoration: none;'><h4>Total Price: &#163;" . $total_price . "</h4></li>";
 
             echo "<li class='pull-left' style='line-style: none; text-decoration: none;'><script async='async' src='https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=tasinclair1@gmail.com'"; 
                 echo    "data-button='buynow'"; 
