@@ -2,7 +2,7 @@
 include_once("includes/config.php");
 include_once("includes/mysql.php");
  
-$page_title="Cart";
+$site_page_title="Cart";
 include("includes/header.php");
 include("includes/heading.php");
  
