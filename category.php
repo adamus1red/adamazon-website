@@ -9,12 +9,13 @@
         $oMySQL = new MySQL($config['mysql_database'], $config['mysql_user'], $config['mysql_pass'], $config['mysql_host']);
         
         // Build an SQL query to search the blog_entries table
-             $sql = "SELECT DISTINCT i.prodID, i.name, i.description, i.price FROM `items` i INNER JOIN `is_cat` c ON (i.prodID = c.prodID) WHERE (c.catID=\"".$request."\")";
+             $sql = "SELECT DISTINCT i.prodID, i.name, i.description, i.price FROM `items` i INNER JOIN `is_cat` c ON (i.prodID = c.prodID) WHERE (c.catID=\"".$request."\") AND i.active IS TRUE";
         // Execute the query
         $result = $oMySQL->executeSQL($sql);
         // Loop over results
         if($result!=1){
         ?>
+        <div style="margin-top: 40px; margin-left: 40px; margin-right: 40px;">
         <table style="width: 100%;">
             <thead>
                 <tr>
@@ -26,6 +27,7 @@
                 </tr>
             </thead>
             <tbody>
+        </div>
                 
 <?php
         if(!empty($result[1])){
@@ -36,7 +38,7 @@
                  "    <td>".$result[$i]['name']."</td>\n".
                  "    <td>".$result[$i]['description']."</td>\n".
                  "    <td>".$result[$i]['price']."</td>\n".
-                 "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                 "    <td id=\"basket\" action=\"addtocart.php\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
                  "</tr>";
                  $j++;
         }
@@ -47,7 +49,7 @@
                  "    <td>".$result['name']."</td>\n".
                  "    <td>".$result['description']."</td>\n".
                  "    <td>".$result['price']."</td>\n".
-                 "    <td id=\"basket\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
+                 "    <td id=\"basket\" action=\"addtocart.php\">Add to basket!</td>\n". //TODO Impliment adding stuff to basket
                  "</tr>";
         }
      }
@@ -55,7 +57,9 @@
         </tbody>
         </table>
 <?php   } else { ?>
+        <div style="margin-top: 40px; margin-left: 40px; margin-right: 40px;">
             <h3>No results returned</h3>
+        </div>
 <?php   }
     } else {
         echo "    <form method=\"POST\" action=\"search.php\">\n".
