@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 $cookie = $_COOKIE['cart_items_cookie'];
@@ -20,18 +19,5 @@ setcookie('cart_items_cookie', $json);
  
 // redirect to product list and tell the user it was added to cart
 header('Location: cart.php?action=removed&id=' . $id);
-=======
-<?php
-session_start();
- 
-// get the product id
-$id = isset($_GET['id']) ? $_GET['id'] : "";
-$name = isset($_GET['name']) ? $_GET['name'] : "";
- 
-// remove the item from the array
-unset($_SESSION['cart_items'][$id]);
- 
-// redirect to product list and tell the user it was added to cart
-header('Location: cart.php?action=removed&id=' . $id . '&name=' . $name);
->>>>>>> 3085d8503eace0aab169c7a2ce7281842c417c43
+
 ?>
