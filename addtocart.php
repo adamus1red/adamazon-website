@@ -7,8 +7,6 @@ $cart_items=array();
  
 // get the product id and name
 $id = isset($_GET['pid']) ? $_GET['pid'] : "";
-$name = isset($_GET['name']) ? $_GET['name'] : "";
-$size = isset($_GET['size']) ? $_GET['size'] : "";
  
 // add new item on array
 $cart_items[$id]=$id;
