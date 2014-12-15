@@ -84,7 +84,7 @@ if(count($saved_cart_items)>0){
 
         echo "<ul style='list-style-type: none'><li class='pull-left' style='line-style: none; text-decoration: none;'><h4>Total Price: &#163;" . $total_price . "</h4></li>";
 
-            echo "<li class='pull-left' style='line-style: none; text-decoration: none;'><script async='async' src='https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=tasinclair1@gmail.com'"; 
+            echo "<li class='pull-left' style='line-style: none; text-decoration: none;'><script async='async' src='https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=tasinclair1-facilitator@gmail.com'"; 
                 echo    "data-button='buynow'"; 
                 echo    "data-name='Adamazon Sale'";
                 echo    "data-amount='" . $total_price . "'"; 
